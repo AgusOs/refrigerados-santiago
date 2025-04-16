@@ -1,4 +1,8 @@
 import * as React from 'react';
+
+import { useNavigate } from 'react-router-dom';
+import styles from './Navbar.module.css';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,13 +17,42 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = [
+  {
+    name: 'Ofertas',
+    path: '/'
+  },
+  {
+    name: 'Como comprar',
+    path: '/como-comprar'
+  },
+  {
+    name: 'La empresa',
+    path: '/empresa'
+  },
+  {
+    name: 'Sucursales',
+    path: '/sucursales'
+  }
+];
+
 
 function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  
+  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    return () => {    
+      navigate(path);
+    }
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -27,15 +60,12 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding onClick={handleNavigate(item.path)}>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -59,17 +89,21 @@ function Navbar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography>
+          <div className={styles.socialscontainer}>
+            <a href="https://www.facebook.com/refrigeradosantiago" target="_blank" rel="noopener noreferrer">
+              <FacebookRoundedIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
+            </a>
+            <a href="https://wa.me/5492954273864" target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
+            </a>
+            <a href="https://www.instagram.com/refrigerados.santiago/" target="_blank" rel="noopener noreferrer">
+              <InstagramIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
+            </a>
+          </div>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+            {navItems.map((item, index) => (
+              <Button key={index} sx={{ color: '#fff' }} onClick={handleNavigate(item.path)}>
+                {item.name}
               </Button>
             ))}
           </Box>
