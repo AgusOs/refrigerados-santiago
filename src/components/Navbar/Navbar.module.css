@@ -1,0 +1,32 @@
+
+.nav
+
+.logocontainer{
+    background-color: white;
+    border-radius: 50% 0 0 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 100%;
+    width: 70px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.logocontainer > img{
+    width: 300%;
+    height: 300%;
+    object-fit: contain;
+    position: relative;
+} 
+
+.socialscontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socialscontainer > a {
+    margin: 0 20px 0 0;
+}

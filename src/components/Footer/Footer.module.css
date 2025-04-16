@@ -1,0 +1,28 @@
+.footer {
+    background-color: #017FAF;
+    color: white;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.socialscontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.socialscontainer > a {
+    margin: 0 20px 0 0;
+}
+
+.logocontainer{
+    font-weight: bold;
+    padding: 20px;
+}
+
+.logocontainer > img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
