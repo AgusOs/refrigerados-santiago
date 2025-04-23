@@ -89,8 +89,8 @@ function Navbar(props) {
     <ThemeProvider theme={theme}>
       <Box sx={{ display: 'flex', bgcolor: 'primary.main' }}>
         <CssBaseline />
-        <AppBar position='static' component="nav" sx={{ height: '10vh', justifyContent: 'center' }}>
-          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', height: '12vh' }}>
+        <AppBar position='static' component="nav" sx={{ height: '10vh', justifyContent: 'center', minHeight: '76px' }}>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', height: '10vh', minHeight: '76px' }}>
             <IconButton
               color="inherit"
               aria-label="open drawer"

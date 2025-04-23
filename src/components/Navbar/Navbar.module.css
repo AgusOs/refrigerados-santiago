@@ -1,16 +1,21 @@
 .logocontainer{
     background-color: white;
     height: 10vh;
+    min-height: 76px;
+    border-radius: 50%;
 }
 
 .logocontainer > img{
     height: 10vh;
+    min-height: 76px;
     width: auto;
     object-fit: contain;
+    padding: 5px;
 }
 
 .logo {
     height: 10vh;
+    min-height: 76px;
     width: auto;
     object-fit: contain;
 }

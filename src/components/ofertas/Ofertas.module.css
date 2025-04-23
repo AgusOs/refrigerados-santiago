@@ -1,0 +1,16 @@
+/* Ofertas Page */
+.ofertasContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('src/assets/images/fondo-ofertas.jpg');
+    width: 100%;
+    min-height: 600px;
+}
+
+.ofertasSign{
+    position: relative;
+    top: 20px;
+    width: 500px;
+    height: 150px;
+}
