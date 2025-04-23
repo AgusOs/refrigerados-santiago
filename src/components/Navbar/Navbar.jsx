@@ -3,6 +3,8 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
+import { ThemeProvider, createTheme } from '@mui/material';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -41,6 +43,13 @@ const navItems = [
   }
 ];
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#017FAF',
+    },
+  },
+});
 
 function Navbar(props) {
   const { window } = props;
@@ -60,6 +69,7 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <img src="src\assets\logo-color.png" alt="logo" className={styles.logo}/>
       <Divider />
       <List>
         {navItems.map((item, index) => (
@@ -76,57 +86,62 @@ function Navbar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{ height: '90px'}}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+    <ThemeProvider theme={theme}>
+      <Box sx={{ display: 'flex', bgcolor: 'primary.main' }}>
+        <CssBaseline />
+        <AppBar position='static' component="nav" sx={{ height: '10vh', justifyContent: 'center' }}>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', height: '12vh' }}>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <div className={styles.socialscontainer}>
+              <a href="https://www.facebook.com/refrigeradosantiago" target="_blank" rel="noopener noreferrer">
+                <FacebookRoundedIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
+              </a>
+              <a href="https://wa.me/5492954273864" target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
+              </a>
+              <a href="https://www.instagram.com/refrigerados.santiago/" target="_blank" rel="noopener noreferrer">
+                <InstagramIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
+              </a>
+            </div>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              {navItems.map((item, index) => (
+                <Button key={index} sx={{ color: '#fff' }} onClick={handleNavigate(item.path)}>
+                  {item.name}
+                </Button>
+              ))}
+            </Box>
+            <div className={styles.logocontainer}>
+              <img src="src\assets\logo-color.png" alt="logo"/>
+            </div>
+          </Toolbar>
+        </AppBar>
+        <nav>
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            }}
           >
-            <MenuIcon />
-          </IconButton>
-          <div className={styles.socialscontainer}>
-            <a href="https://www.facebook.com/refrigeradosantiago" target="_blank" rel="noopener noreferrer">
-              <FacebookRoundedIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
-            </a>
-            <a href="https://wa.me/5492954273864" target="_blank" rel="noopener noreferrer">
-              <WhatsAppIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
-            </a>
-            <a href="https://www.instagram.com/refrigerados.santiago/" target="_blank" rel="noopener noreferrer">
-              <InstagramIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
-            </a>
-          </div>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item, index) => (
-              <Button key={index} sx={{ color: '#fff' }} onClick={handleNavigate(item.path)}>
-                {item.name}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-    </Box>
+            {drawer}
+          </Drawer>
+        </nav>
+      </Box>
+    </ThemeProvider>
   );
 }
 

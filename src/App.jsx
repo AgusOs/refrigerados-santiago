@@ -7,7 +7,7 @@ import { SucursalesPage } from './components/pages/SucursalesPage';
 
 function App () {
     return ( 
-        <div style={{paddingTop: '90px'}}>
+        <div>
             <Routes>
                 <Route path='/' element={
                     <OfertasPage/>

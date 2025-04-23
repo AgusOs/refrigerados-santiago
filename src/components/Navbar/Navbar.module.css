@@ -1,22 +1,19 @@
 .logocontainer{
     background-color: white;
-    border-radius: 50% 0 0 50%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    height: 100%;
-    width: 70px;
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    height: 10vh;
 }
 
 .logocontainer > img{
-    width: 300%;
-    height: 300%;
+    height: 10vh;
+    width: auto;
     object-fit: contain;
-    position: relative;
-} 
+}
+
+.logo {
+    height: 10vh;
+    width: auto;
+    object-fit: contain;
+}
 
 .socialscontainer {
     display: flex;
