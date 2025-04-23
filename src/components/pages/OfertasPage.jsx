@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Pages.module.css';
-import { Banner } from '../banner/Banner';
-import { Ofertas } from '../ofertas/Ofertas';
+import { Banner } from '../atoms/banner/Banner';
+import { Ofertas } from '../atoms/ofertas/Ofertas';
 
 export const OfertasPage = () => {
   return (

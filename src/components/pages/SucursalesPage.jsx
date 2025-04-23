@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Pages.module.css';
-import { Banner } from '../banner/Banner';
-import { Mapa } from '../mapa/Mapa';
+import { Banner } from '../atoms/banner/Banner';
+import { Mapa } from '../atoms/mapa/Mapa';
 
 export const SucursalesPage = () => {
   return (
