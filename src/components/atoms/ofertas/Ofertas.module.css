@@ -14,3 +14,11 @@
     width: 600px;
     height: 180px;
 }
+
+@media (max-width: 599px) {
+    .ofertasSign{
+        width: 400px;
+        height: 120px;
+        top: 10px;
+    }
+}

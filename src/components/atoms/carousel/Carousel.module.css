@@ -20,4 +20,11 @@
     height: 400px;
     object-fit: cover;
   }
+
+  @media (max-width: 599px) {
+    .swiperSlide img{
+        width: 300px;
+        height: 300px;
+    }
+}
   

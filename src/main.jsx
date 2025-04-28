@@ -3,6 +3,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './theme';
+import CssBaseline from '@mui/material/CssBaseline';
+
 import App from './App.jsx';
 
 import { Footer } from './components/Footer/Footer.jsx';
@@ -11,11 +15,14 @@ import { Tabs } from './components/tabs/Tabs.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Navbar/>
-      <Tabs/>
-      <App/>
-      <Footer/>
-    </BrowserRouter>
-  </StrictMode>,
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <BrowserRouter>
+        <Navbar/>
+        <Tabs/>
+        <App/>
+        <Footer/>
+      </BrowserRouter>
+    </ThemeProvider>
+  </StrictMode>
 )

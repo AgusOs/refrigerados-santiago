@@ -25,11 +25,11 @@ export const carouselConfig = {
     0: {
       slidesPerView: 1,
     },
-    600: {
+    801: {
       slidesPerView: 2,
       spaceBetween: 30,
     },
-    1230: {
+    1231: {
       slidesPerView: 3,
       spaceBetween: 30,
     },

@@ -1,0 +1,10 @@
+.mapaContainer {
+    padding: 10px;
+    background-color: #017FAF;
+}
+
+.mapa {
+    height: 500px;
+    width: 100%;
+    position: static;
+}
