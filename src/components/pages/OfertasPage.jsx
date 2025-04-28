@@ -6,7 +6,7 @@ import { Ofertas } from '../atoms/ofertas/Ofertas';
 export const OfertasPage = () => {
   return (
       <div className={styles.container}>
-        <Banner img={'src/assets/images/8.jpg'}/>
+        <Banner img={'src/assets/images/bannerv2.jpg'}/>
         <Ofertas/>
         <Banner img={'src/assets/images/18.jpg'}/>
       </div>
