@@ -1,0 +1,23 @@
+.swiper {
+    width: 80%;
+    height: 400px; /* o la altura que quieras */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiperSlide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .swiperSlide img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
