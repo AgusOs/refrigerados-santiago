@@ -8,7 +8,7 @@ import { Grid } from '@mui/material';
 export const SucursalesPage = () => {
   return (
     <div className={styles.container}>
-      <Banner img={'src/assets/images/11.jpg'}/>
+      <Banner img={'/assets/images/11.jpg'}/>
       <Mapa/>
       <Grid container spacing={2} className={styles.sucursalesContainer}>
         { sucursales.map((sucursal, index) => (
