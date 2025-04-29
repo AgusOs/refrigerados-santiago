@@ -5,7 +5,8 @@
     align-items: center;
     background-image: url('src/assets/images/fondo-ofertas.jpg');
     width: 100%;
-    min-height: 600px;
+    /* min-height: 600px; */
+    padding-bottom: 20px;
 }
 
 .ofertasSign{

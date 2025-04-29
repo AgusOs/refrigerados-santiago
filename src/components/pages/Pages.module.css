@@ -1,3 +1,24 @@
 .container {
     color: black;
 }
+
+/* Sucursales */
+.sucursalesContainer{
+    background-color: #017FAF;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sucursalCard {
+    width: 260px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    color: white;
+}
+
+.sucursalCard a {
+    color: white;
+}

@@ -11,23 +11,13 @@ export const carouselConfig = {
   spaceBetween: 30,
   grabCursor: true,
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  
-  pagination: {
-    clickable:true,
-    dynamicBullets:true,
-  },
-
   breakpoints: {
     0: {
-      slidesPerView: 1,
+      slidesPerView: 1
     },
-    801: {
+    601: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 20,
     },
     1231: {
       slidesPerView: 3,

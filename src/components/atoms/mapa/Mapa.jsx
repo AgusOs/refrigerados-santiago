@@ -1,8 +1,9 @@
 import React from 'react';
-import { mapConfig, customIcon, sucursales } from './mapaConfig';
+import { mapConfig, customIcon } from './mapaConfig';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import style from './Mapa.module.css'
+import { sucursales } from '../../../sucursales';
 
 export const Mapa = () => {
   return (

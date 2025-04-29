@@ -3,12 +3,12 @@
     flex-direction: row;
     height: 8vh;
     min-height: 62px;
-    background-color: #78c2df;
+    background-color: #6EB7D1;
     position: fixed;
     top: 0;
     width: 100%;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 9999;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
 }
@@ -33,7 +33,7 @@
 }
 
 .tabs > button {
-    background-color: #78c2df;
+    background-color: #6EB7D1;
     border: none;
     color: white;
     padding: 14px 16px;

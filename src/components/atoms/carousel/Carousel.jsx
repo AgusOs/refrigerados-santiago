@@ -7,10 +7,20 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import style from './Carousel.module.css';
+import { useMediaQuery } from '@mui/material';
 
 export const Carousel = () => {
+  const isDesktop = useMediaQuery('(min-width: 801px)');
+
+  const config = {
+    ...carouselConfig,
+    pagination: isDesktop? {clickable:true, dynamicBullets:true} : false,
+    navigation: isDesktop? {nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'} : false,
+    
+  };
+  
   return (
-    <Swiper {...carouselConfig} className={style.swiper}>
+    <Swiper {...config} className={style.swiper}>
       <SwiperSlide className={style.swiperSlide}>
         <img src="src\assets\ofertas\3.png" alt="oferta1" />
       </SwiperSlide>
@@ -29,8 +39,12 @@ export const Carousel = () => {
       <SwiperSlide className={style.swiperSlide}>
         <img src="src\assets\ofertas\8.png" alt="oferta6" />
       </SwiperSlide>
-      <div className="swiper-button-prev"></div>
-      <div className="swiper-button-next"></div>
+      {isDesktop && (
+        <>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
+        </>
+      )}
     </Swiper>
   );
 }
