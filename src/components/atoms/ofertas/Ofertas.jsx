@@ -12,7 +12,7 @@ export const Ofertas = () => {
   return (
     <div ref={ref} className={styles.ofertasContainer}>
       <Zoom in={inView} timeout={500}>
-        <img className={styles.ofertasSign} src='src/assets/images/ofertas-sign.png' alt='ofertas-sign'/>
+        <img className={styles.ofertasSign} src='/assets/images/ofertas-sign.png' alt='ofertas-sign'/>
       </Zoom>
       <Carousel/>
     </div>
