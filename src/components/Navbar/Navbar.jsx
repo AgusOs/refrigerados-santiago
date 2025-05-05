@@ -74,7 +74,7 @@ function Navbar(props) {
         {navItems.map((item, index) => (
           <ListItem key={index} disablePadding onClick={handleNavigate(item.path)}>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.name} />
+              <b>{item.name}</b>
             </ListItemButton>
           </ListItem>
         ))}
@@ -113,7 +113,7 @@ function Navbar(props) {
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item, index) => (
                 <Button key={index} sx={{ color: '#fff' }} onClick={handleNavigate(item.path)}>
-                  {item.name}
+                  <b>{item.name}</b>
                 </Button>
               ))}
             </Box>

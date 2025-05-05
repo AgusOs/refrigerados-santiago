@@ -9,7 +9,7 @@ export const Banner = ({ img, variant }) => {
     triggerOnce: true,
   });
 
-  const bannerClass = `${styles.banner} ${variant === 'blp' ? styles.bannerBlp : ''}`;
+  const bannerClass = `${styles.banner} ${variant === 'blp' ? styles.bannerBlp : ''} ${variant === 'como-comprar' ? styles.bannerComprar : ''}`;
 
   return (
     <div ref={ref}>

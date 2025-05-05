@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-size: 2rem;
     color: white;
   }
@@ -26,4 +27,13 @@
         width: 300px;
         height: 300px;
     }
+}
+
+.title {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
 }

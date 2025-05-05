@@ -2,7 +2,6 @@
     width: 100%;
     height: auto;
     display: block;
-    max-height: 400px; /* o lo que necesites para mobile */
     object-fit: cover;
     object-position: center;
     display: block;
@@ -10,15 +9,20 @@
 
 @media (max-width: 768px) {
     .banner {
-      height: 180px; /* recorte en mobile */
-      object-position: center; /* centro vertical y horizontal */
+      height: 180px; 
+      object-position: center; 
+    }
+
+    .bannerComprar {
+      height: 200px; 
+      object-position: center; 
     }
 
     .bannerBlp{
         width: 100%;
         height: auto;
         display: block;
-        max-height: 400px; /* o lo que necesites para mobile */
+        max-height: 400px;
         object-fit: cover;
         object-position: center;
         display: block;
