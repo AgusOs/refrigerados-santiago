@@ -1,5 +1,26 @@
 .banner{
     width: 100%;
     height: auto;
-    display: block
+    display: block;
+    max-height: 400px; /* o lo que necesites para mobile */
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
+
+@media (max-width: 768px) {
+    .banner {
+      height: 180px; /* recorte en mobile */
+      object-position: center; /* centro vertical y horizontal */
+    }
+
+    .bannerBlp{
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 400px; /* o lo que necesites para mobile */
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+  }

@@ -12,7 +12,7 @@ export const SucursalesPage = () => {
       <Mapa/>
       <Grid container spacing={2} className={styles.sucursalesContainer}>
         { sucursales.map((sucursal, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index} className={styles.sucursalCard}>
+          <Grid key={index} className={styles.sucursalCard}>
             <p>{sucursal.nombre}</p>
             <p>{sucursal.direccion}</p>
             <a href={`https://wa.me/${sucursal.whatsapp}`} target="_blank">{sucursal.telefono}</a>

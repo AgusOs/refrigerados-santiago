@@ -8,7 +8,7 @@ export const OfertasPage = () => {
       <div className={styles.container}>
         <Banner img={'/assets/images/bannerv2.jpg'}/>
         <Ofertas/>
-        <Banner img={'/assets/images/banner-bdlp.jpg'}/>
+        <Banner img={'/assets/images/banner-bdlp.jpg'} variant={"blp"}/>
       </div>
     )
 }
