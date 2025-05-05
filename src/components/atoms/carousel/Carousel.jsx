@@ -22,22 +22,22 @@ export const Carousel = () => {
   return (
     <Swiper {...config} className={style.swiper}>
       <SwiperSlide className={style.swiperSlide}>
-        <img src="src\assets\ofertas\3.png" alt="oferta1" />
+        <img src="/assets/ofertas/3.png" alt="oferta1" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <img src="src\assets\ofertas\4.png" alt="oferta2" />
+        <img src="/assets/ofertas/4.png" alt="oferta2" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <img src="src\assets\ofertas\5.png" alt="oferta3" />
+        <img src="/assets/ofertas/5.png" alt="oferta3" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <img src="src\assets\ofertas\6.png" alt="oferta4" />
+        <img src="/assets/ofertas/6.png" alt="oferta4" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <img src="src\assets\ofertas\7.png" alt="oferta5" />
+        <img src="/assets/ofertas/7.png" alt="oferta5" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <img src="src\assets\ofertas\8.png" alt="oferta6" />
+        <img src="/assets/ofertas/8.png" alt="oferta6" />
       </SwiperSlide>
       {isDesktop && (
         <>

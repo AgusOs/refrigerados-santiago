@@ -68,7 +68,7 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <img src="src\assets\logo-color.png" alt="logo" className={styles.logo}/>
+      <img src="\assets\logo-color.png" alt="logo" className={styles.logo}/>
       <Divider />
       <List>
         {navItems.map((item, index) => (
@@ -118,7 +118,7 @@ function Navbar(props) {
               ))}
             </Box>
             <div className={styles.logocontainer}>
-              <img src="src\assets\logo-color.png" alt="logo"/>
+              <img src="\assets\logo-color.png" alt="logo"/>
             </div>
           </Toolbar>
         </AppBar>

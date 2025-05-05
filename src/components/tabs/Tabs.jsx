@@ -31,7 +31,7 @@ export const Tabs = () => {
   return (
     <div className={`${styles.tabsbar} ${showTabs ? styles.visible : styles.hidden}`}>
       <div className={styles.logocontainer}>
-        <img src="src/assets/id-blanco.png" alt="logo" className={styles.logo}/>
+        <img src="/assets/id-blanco.png" alt="logo" className={styles.logo}/>
       </div>
       <div className={styles.tabs}>
         <button onClick={handleNavigate('/')}>Ofertas</button>
