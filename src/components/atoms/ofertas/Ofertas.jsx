@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Ofertas.module.css'
 import { Carousel } from '../carousel/Carousel'
-import Zoom from '@mui/material/Zoom';
+import { Slide } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
 
 export const Ofertas = () => {
@@ -11,9 +11,9 @@ export const Ofertas = () => {
   });
   return (
     <div ref={ref} className={styles.ofertasContainer}>
-      <Zoom in={inView} timeout={500}>
+      <Slide direction="up" in={inView} timeout={500}>
         <img className={styles.ofertasSign} src='/assets/images/ofertas-sign.png' alt='ofertas-sign'/>
-      </Zoom>
+      </Slide>
       <Carousel/>
     </div>
   )

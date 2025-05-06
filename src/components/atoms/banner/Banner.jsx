@@ -5,7 +5,7 @@ import Slide from '@mui/material/Slide';
 
 export const Banner = ({ img, variant }) => {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.5,
     triggerOnce: true,
   });
 
@@ -13,7 +13,7 @@ export const Banner = ({ img, variant }) => {
 
   return (
     <div ref={ref}>
-      <Slide direction="left" in={inView} timeout={500}>
+      <Slide direction="up" in={inView} timeout={500}>
         <img className={bannerClass} src={img} alt="banner" />
       </Slide>
     </div>

@@ -15,11 +15,11 @@ export const sucursales = [
       coords: [-35.654957678718844, -63.75419803195235]
     },
     {
-      nombre: "General Pico - Calle 26",
+      nombre: "Victorica",
       direccion: "Calle 26 #710",
       telefono: "2954 51-0048",
       whatsapp: "2954510048",
-      coords: [-35.657249526121355, -63.75021647726095]
+      coords: [-36.219802168801486, -65.43084177050169]
     },
     {
       nombre: "Santa Rosa - Parque Industrial",
