@@ -29,13 +29,13 @@ export const OfertasPage = () => {
       <div className={style.container}>
         <Swiper {...config} className={style.swiper}>
           <SwiperSlide className={style.swiperSlide}>
-            <Banner img={"/assets/images/inicio-1.jpg"} alt="oferta1" variant={"inicio-1"}/>
+            <Banner img={"/assets/images/inicio-1.jpg"} alt="oferta1" variant={"blp"}/>
           </SwiperSlide>
           <SwiperSlide className={style.swiperSlide}>
-            <Banner img={"/assets/images/inicio-2.jpg"} alt="oferta2" variant={"inicio-2"}/>
+            <Banner img={"/assets/images/inicio-2.jpg"} alt="oferta2" variant={"blp"}/>
           </SwiperSlide>
           <SwiperSlide className={style.swiperSlide}>
-            <Banner img={"/assets/images/inicio-3.jpg"} alt="oferta2" variant={"inicio-3"}/>
+            <Banner img={"/assets/images/inicio-3.jpg"} alt="oferta2" variant={"blp"}/>
           </SwiperSlide>
         </Swiper>
         {/* <Banner img={'/assets/images/bannerv2.jpg'}/> */}

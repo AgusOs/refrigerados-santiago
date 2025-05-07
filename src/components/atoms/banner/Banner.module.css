@@ -28,7 +28,7 @@
         display: block;
     }
 
-    .bannerInicio1 {
+    /* .bannerInicio1 {
       object-fit: cover;
       object-position: 70% 100%;
     }
@@ -39,5 +39,5 @@
     .bannerInicio3 {
       object-fit: cover;
       object-position: 95% 100%;
-    }
+    } */
   }
