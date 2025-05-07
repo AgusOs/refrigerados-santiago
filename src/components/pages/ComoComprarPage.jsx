@@ -1,7 +1,6 @@
 import React from 'react'
-import styles from './Pages.module.css';
+import styles from './ComoComprar.module.css';
 import { Banner } from '../atoms/banner/Banner';
-import { Typography } from '@mui/material';
 
 export const ComoComprarPage = () => {
   return (
@@ -44,6 +43,9 @@ export const ComoComprarPage = () => {
             Pedidos personalizados para intituciones particulares.
           </p>
         </div>
+      </div>
+      <div className={styles.sectionsContainer}>
+        <div className={styles.section}></div>
       </div>
       <Banner img={'/assets/images/comprar-1.jpg'} variant={"como-comprar"}/>
       <Banner img={'/assets/images/comprar-2.jpg'} variant={"como-comprar"}/>

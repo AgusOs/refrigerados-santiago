@@ -1,0 +1,96 @@
+.container {
+    color: black;
+    background-color: white;
+}
+
+/* Como compar cards */
+.cardsRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px 20px 60px 20px;
+    width: 100%;
+}
+  
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 280px;
+    margin: 10px;
+    transition: transform 0.1s ease-in-out;
+    position: relative;
+}
+  
+.card:hover {
+    transform: scale(1.15);
+}
+  
+.cardImage {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 16px;
+    object-fit: contain;
+}
+  
+.cardTitle {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+    position: absolute;
+    bottom: 25px;
+}
+  
+.cardText {
+    font-size: 14px;
+    color: #333;
+    max-width: 220px;
+    line-height: 1.4;
+    margin-top: 5px;
+    position: absolute;
+    bottom: -35px;
+}
+  
+@media (max-width: 768px) {
+    .card {
+      width: 35%;
+    }
+  
+    .cardImage {
+      width: 200px;
+      height: 200px;
+    }
+
+    .cardTitle {
+      font-size: 12px;
+    }
+
+    .cardText {
+      display: none;
+    }
+}
+
+/* Sections */
+.sectionsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #017FAF;
+    width: 100%;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
