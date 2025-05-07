@@ -15,7 +15,7 @@ export const OfertasPage = () => {
     speed: 1200,
     autoplay: {
       delay: 4000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     loop: true,
     spaceBetween: 0,
