@@ -27,4 +27,17 @@
         object-position: center;
         display: block;
     }
+
+    .bannerInicio1 {
+      object-fit: cover;
+      object-position: 70% 100%;
+    }
+    .bannerInicio2 {
+      object-fit: cover;
+      object-position: 30% 100%;
+    }
+    .bannerInicio3 {
+      object-fit: cover;
+      object-position: 95% 100%;
+    }
   }

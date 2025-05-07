@@ -3,6 +3,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 export const carouselConfig = {
   modules: [Autoplay, Pagination, Navigation],
   effect: 'fade',
+  speed: 1000,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
