@@ -22,27 +22,39 @@ export const Carousel = () => {
   return (
     <Swiper {...config} className={style.swiper}>
       <SwiperSlide className={style.swiperSlide}>
-        <p className={style.title}>QUESO DANBO MILKAUT</p>
+        <div className={style.title}>
+          <p>QUESO DANBO MILKAUT</p>
+        </div>
         <img src="/assets/ofertas/3.png" alt="oferta1" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <p className={style.title}>QUESO CREMOSO DON FELIX</p>
+        <div className={style.title}>
+          <p>QUESO CREMOSO DON FELIX</p>
+        </div>
         <img src="/assets/ofertas/4.png" alt="oferta2" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <p className={style.title}>AZUCAR LEDESMA</p>
+        <div className={style.title}>
+          <p>AZUCAR LEDESMA</p>
+        </div>
         <img src="/assets/ofertas/5.png" alt="oferta3" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <p className={style.title}>TERRABUSI VARIEDAD</p>
+        <div className={style.title}>
+          <p>TERRABUSI VARIEDAD</p>
+        </div>
         <img src="/assets/ofertas/6.png" alt="oferta4" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <p className={style.title}>JABON LIQUIDO HEROE 800ml</p>
+        <div className={style.title}>
+          <p>JABON LIQUIDO HEROE 800ml</p>
+        </div>
         <img src="/assets/ofertas/7.png" alt="oferta5" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
-        <p className={style.title}>JUGO CONCENTRADO PUREZA DE LAS SIERRAS 1Lt</p>
+        <div className={style.title}>
+          <p>JUGO CONCENTRADO 1Lt</p>
+        </div>
         <img src="/assets/ofertas/8.png" alt="oferta6" />
       </SwiperSlide>
       {isDesktop && (

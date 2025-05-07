@@ -30,11 +30,24 @@
 }
 
 .title {
-    font-size: 14px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title p{
+  margin: 0;
+  white-space: nowrap;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0 !important;
 }
