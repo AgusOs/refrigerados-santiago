@@ -3,7 +3,7 @@
     flex-direction: row;
     height: 8vh;
     min-height: 62px;
-    background-color: #6EB7D1;
+    background-color: #017FAF;
     position: fixed;
     top: 0;
     width: 100%;
@@ -33,7 +33,7 @@
 }
 
 .tabs > button {
-    background-color: #6EB7D1;
+    background-color: #017FAF;
     border: none;
     color: white;
     padding: 14px 16px;
@@ -64,4 +64,14 @@
     justify-content: center;
     align-items: center;
     padding-left: 1rem;
+}
+
+.socialscontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socialscontainer > a {
+    margin: 0 20px 0 0;
 }

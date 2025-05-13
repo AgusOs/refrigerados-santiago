@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './ComoComprar.module.css';
-import { Banner } from '../atoms/banner/Banner';
+import { Banner } from '../../atoms/banner/Banner';
 
 export const ComoComprarPage = () => {
   return (

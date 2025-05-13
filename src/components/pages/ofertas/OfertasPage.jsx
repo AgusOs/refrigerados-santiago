@@ -1,7 +1,7 @@
 import React from 'react';
-import style from './Pages.module.css';
-import { Banner } from '../atoms/banner/Banner';
-import { Ofertas } from '../atoms/ofertas/Ofertas';
+import style from './OfertasPage.module.css';
+import { Banner } from '../../atoms/banner/Banner';
+import { Ofertas } from '../../atoms/ofertas/Ofertas';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -28,9 +28,9 @@ export const OfertasPage = () => {
   return (
       <div className={style.container}>
         <Swiper {...config} className={style.swiper}>
-          <SwiperSlide className={style.swiperSlide}>
+          {/* <SwiperSlide className={style.swiperSlide}>
             <Banner img={"/assets/images/inicio-1.jpg"} alt="oferta1" variant={"blp"}/>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide className={style.swiperSlide}>
             <Banner img={"/assets/images/inicio-2.jpg"} alt="oferta2" variant={"blp"}/>
           </SwiperSlide>

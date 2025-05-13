@@ -1,9 +1,9 @@
 import {Routes, Route} from 'react-router-dom';
 
-import { OfertasPage } from './components/pages/OfertasPage';
-import { ComoComprarPage } from './components/pages/ComoComprarPage';
+import { OfertasPage } from './components/pages/ofertas/OfertasPage';
+import { ComoComprarPage } from './components/pages/como-comprar/ComoComprarPage';
 import { EmpresaPage } from './components/pages/EmpresaPage';
-import { SucursalesPage } from './components/pages/SucursalesPage';
+import { SucursalesPage } from './components/pages/sucursales/SucursalesPage';
 
 function App () {
     return ( 

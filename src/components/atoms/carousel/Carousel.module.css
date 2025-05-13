@@ -1,5 +1,5 @@
 .swiper {
-    width: 80%;
+    width: 95%;
     height: 400px; /* o la altura que quieras */
     display: flex;
     flex-direction: row;
@@ -17,8 +17,8 @@
   }
 
   .swiperSlide img {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
   }
 
@@ -33,20 +33,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
   padding: 5px;
   position: absolute;
-  top: 10px;
+  top: 20px;
   width: 250px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .title p{
   margin: 0;
   white-space: nowrap;
   font-size: 14px;
-  color: black;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   text-align: center;
   font-weight: bold;
   margin-bottom: 0 !important;
