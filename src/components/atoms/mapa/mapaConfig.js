@@ -13,7 +13,7 @@ export const mapConfig = {
 
 // Icono personalizado
 export const customIcon = L.icon({
-  iconUrl: "public/assets/images/pin.png",
+  iconUrl: "/assets/images/pin.png",
   iconSize: [50, 50],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
