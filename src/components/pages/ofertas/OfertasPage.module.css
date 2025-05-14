@@ -41,3 +41,22 @@ p {
     width: auto;
     object-fit: contain;
 }
+
+.ledesma {
+    width: 800px !important;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 850px) {
+    .swiper {
+        height: 200px;
+    }
+
+    .ledesma {
+        width: 220px !important;
+        height: auto;
+        object-fit: contain;
+    }
+
+}

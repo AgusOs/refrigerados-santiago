@@ -30,14 +30,14 @@ export const OfertasPage = () => {
         <Swiper {...config} className={style.swiper}>
           <SwiperSlide className={style.swiperSlide}>
             <div>
-              <img src="\assets\images\portada-sign1.png" alt="sign" />
+              <img src="\assets\images\portada-sign1.png" alt="sign"/>
               <img src="\assets\images\carrito-portada.png" alt="sign" />
             </div>
           </SwiperSlide>
           <SwiperSlide className={style.swiperSlide}>            
             <div>
               <img src="\assets\images\torta-portada.png" alt="sign" />
-              <img src="\assets\images\ledesma-portada.png" alt="sign" />
+              <img src="\assets\images\ledesma-portada.png" alt="sign"  className={style.ledesma}/>
             </div>
           </SwiperSlide>
         </Swiper>

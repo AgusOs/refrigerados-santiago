@@ -143,6 +143,17 @@
     object-fit: contain;
 }
 
+@media (max-width: 850px) {
+    .portada {
+        height: 200px;
+    }
+
+    .portadaSign {
+        width: 50%;
+        height: auto;
+    }
+}
+
 @media (max-width: 1350px) {
 
     .portadaSign {
