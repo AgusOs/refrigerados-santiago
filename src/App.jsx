@@ -2,7 +2,7 @@ import {Routes, Route} from 'react-router-dom';
 
 import { OfertasPage } from './components/pages/ofertas/OfertasPage';
 import { ComoComprarPage } from './components/pages/como-comprar/ComoComprarPage';
-import { EmpresaPage } from './components/pages/EmpresaPage';
+import { EmpresaPage } from './components/pages/empresa/EmpresaPage';
 import { SucursalesPage } from './components/pages/sucursales/SucursalesPage';
 
 function App () {

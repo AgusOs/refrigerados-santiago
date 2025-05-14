@@ -10,3 +10,32 @@ p {
     align-items: center;
     flex-direction: column;
 }
+
+.portada {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/images/main-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.portada img {
+    width: 100%;
+    height: auto;
+    max-width: 850px;
+    object-fit: contain;
+}
+
+@media (max-width: 850px) {
+    .portada {
+        height: 200px;
+    }
+
+    .portada img {
+        width: auto;
+        height: 80%;
+    }
+}

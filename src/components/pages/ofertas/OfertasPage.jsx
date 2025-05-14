@@ -28,17 +28,19 @@ export const OfertasPage = () => {
   return (
       <div className={style.container}>
         <Swiper {...config} className={style.swiper}>
-          {/* <SwiperSlide className={style.swiperSlide}>
-            <Banner img={"/assets/images/inicio-1.jpg"} alt="oferta1" variant={"blp"}/>
-          </SwiperSlide> */}
           <SwiperSlide className={style.swiperSlide}>
-            <Banner img={"/assets/images/inicio-2.jpg"} alt="oferta2" variant={"blp"}/>
+            <div>
+              <img src="\assets\images\portada-sign1.png" alt="sign" />
+              <img src="\assets\images\carrito-portada.png" alt="sign" />
+            </div>
           </SwiperSlide>
-          <SwiperSlide className={style.swiperSlide}>
-            <Banner img={"/assets/images/inicio-3.jpg"} alt="oferta2" variant={"blp"}/>
+          <SwiperSlide className={style.swiperSlide}>            
+            <div>
+              <img src="\assets\images\torta-portada.png" alt="sign" />
+              <img src="\assets\images\ledesma-portada.png" alt="sign" />
+            </div>
           </SwiperSlide>
         </Swiper>
-        {/* <Banner img={'/assets/images/bannerv2.jpg'}/> */}
         <Ofertas/>
         <Banner img={'/assets/images/banner-bdlp.jpg'} variant={"blp"}/>
       </div>

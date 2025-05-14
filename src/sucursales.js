@@ -15,13 +15,6 @@ export const sucursales = [
       coords: [-35.654957678718844, -63.75419803195235]
     },
     {
-      nombre: "Victorica",
-      direccion: "Calle 26 #710",
-      telefono: "2954 51-0048",
-      whatsapp: "2954510048",
-      coords: [-36.219802168801486, -65.43084177050169]
-    },
-    {
       nombre: "Santa Rosa - Parque Industrial",
       direccion: "Parque Industrial Calle 2 #2850",
       telefono: "2954 27-3864",
@@ -104,5 +97,12 @@ export const sucursales = [
       telefono: "2331 40-1204",
       whatsapp: "2331401204",
       coords: [-35.03523275572147, -64.24767280314268]
+    },
+    {
+      nombre: "Victorica",
+      direccion: "Calle 26 #710",
+      telefono: "2954 51-0048",
+      whatsapp: "2954510048",
+      coords: [-36.219802168801486, -65.43084177050169]
     }
   ];

@@ -40,20 +40,20 @@ const navItems = [
     name: 'Sucursales',
     path: '/sucursales'
   },
-  {
-    name: 'Distribuidora',
-    path: '/empresa'
-  },
-  {
-    name: 'Nuestras marcas',
-    path: '/empresa'
-  }
+  // {
+  //   name: 'Distribuidora',
+  //   path: '/empresa'
+  // },
+  // {
+  //   name: 'Nuestras marcas',
+  //   path: '/empresa'
+  // }
 ];
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#017FAF',
+      main: 'rgb(1, 127, 175)',
     },
   },
 });

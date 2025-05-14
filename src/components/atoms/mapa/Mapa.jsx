@@ -27,7 +27,7 @@ export const Mapa = () => {
       <MapContainer
         center={mapConfig.initialCoordinates}
         zoom={mapConfig.zoomLevel}
-        scrollWheelZoom={true}
+        scrollWheelZoom={false}
         className={style.mapa}
         id="mapa"
       >
