@@ -32,10 +32,10 @@ const navItems = [
     name: 'Como comprar',
     path: '/como-comprar'
   },
-  {
-    name: 'La empresa',
-    path: '/empresa'
-  },
+  // {
+  //   name: 'La empresa',
+  //   path: '/empresa'
+  // },
   {
     name: 'Sucursales',
     path: '/sucursales'

@@ -39,7 +39,7 @@ export const Tabs = () => {
       <div className={styles.tabs}>
         <button onClick={handleNavigate('/')}>Ofertas</button>
         <button onClick={handleNavigate('/como-comprar')}>Como comprar</button>
-        <button onClick={handleNavigate('/empresa')}>La empresa</button>
+        {/* <button onClick={handleNavigate('/empresa')}>La empresa</button> */}
         <button onClick={handleNavigate('/sucursales')}>Sucursales</button>
       </div>
       <div className={styles.socialscontainer}>
