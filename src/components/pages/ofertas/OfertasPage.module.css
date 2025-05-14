@@ -17,9 +17,9 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/images/main-background.jpg");
+    /* background-image: url("/assets/images/main-background.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
   
 .swiperSlide {
@@ -35,8 +35,9 @@ p {
     height: 100%;
     width: auto;
 }
+
 .swiperSlide img {
     height: 100%;
     width: auto;
-    object-fit: cover;
+    object-fit: contain;
 }

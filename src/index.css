@@ -12,5 +12,40 @@
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 120vh;
+  background:
+    conic-gradient(
+      from 245deg at 50% 95%,
+      rgb(0, 103, 178, 0.8) 0deg,
+      transparent 8deg,
+      rgba(0, 103, 178, 0.8) 16deg,
+      transparent 24deg,
+      rgba(0, 103, 178, 0.8) 32deg,
+      transparent 40deg,
+      rgba(0, 103, 178, 0.8) 48deg,
+      transparent 56deg,
+      rgba(0, 103, 178, 0.8) 64deg,
+      transparent 72deg,
+      rgba(0, 103, 178, 0.8) 80deg,
+      transparent 88deg,
+      rgba(0, 103, 178, 0.8) 96deg,
+      transparent 104deg,
+      rgba(0, 103, 178, 0.8) 112deg,
+      transparent 120deg,
+      rgba(0, 103, 178, 0.8) 128deg,
+      transparent 136deg,
+      rgba(0, 103, 178, 0.8) 144deg,
+      transparent 152deg,
+      rgba(0, 103, 178, 0.8) 160deg,
+      transparent 168deg,
+      rgba(0, 103, 178, 0.8) 176deg,
+      transparent 184deg,
+      rgba(0, 103, 178, 0.8) 192deg,
+      transparent 200deg,
+      rgba(0, 103, 178, 0.8) 208deg,
+      transparent 216deg
+    ),
+    linear-gradient(to bottom right, #07539b, #30a9f0);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

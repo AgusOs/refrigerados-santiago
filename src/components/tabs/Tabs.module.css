@@ -52,18 +52,18 @@
     color: #0d1b2a;
 }
 
-.logo{
-    width: 150px;
-    height: auto;
-    object-fit: contain;
-    aspect-ratio: 3.44;
-}
-
 .logocontainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 1rem;
+    height: 8vh;
+    min-height: 62px;
+}
+
+.logocontainer > img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 .socialscontainer {

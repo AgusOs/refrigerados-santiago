@@ -1,11 +1,18 @@
 import React from 'react'
 import styles from './ComoComprar.module.css';
 import { Banner } from '../../atoms/banner/Banner';
+import { Slide } from '@mui/material';
 
 export const ComoComprarPage = () => {
   return (
     <div className={styles.container}>
-      <Banner img={'/assets/images/6.jpg'} variant={"blp"}/>
+      <div className={styles.portada}>
+        <img src="\assets\images\comprar-img.png" alt="img" className={styles.portadaImage} />
+        <Slide direction="left" in={true} timeout={1000} mountOnEnter unmountOnExit>
+          <img src="\assets\images\comprar-sign.png" alt="sign" className={styles.portadaSign}/>
+        </Slide>
+      </div>
+      {/* <Banner img={'/assets/images/6.jpg'} variant={"blp"}/> */}
       <div className={styles.cardsRow}>
         <div className={styles.card}>
           <img src="/assets/images/1.png" alt="Carrito de compras" className={styles.cardImage} />

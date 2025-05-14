@@ -97,7 +97,7 @@ function Navbar(props) {
       <Box sx={{ display: 'flex', bgcolor: 'primary.main' }}>
         <CssBaseline />
         <AppBar position='static' component="nav" sx={{ height: '10vh', justifyContent: 'center', minHeight: '76px' }}>
-          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', height: '10vh', minHeight: '76px' }}>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', height: '10vh', minHeight: '76px', paddingRight: '0 !important' }}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -126,6 +126,9 @@ function Navbar(props) {
               ))}
             </Box>
             <div className={styles.logocontainer}>
+              <img src="\assets\images\logo-nav.png" alt="logo"/>
+            </div>
+            <div className={styles.logocontainermobile}>
               <img src="\assets\logo-color.png" alt="logo"/>
             </div>
           </Toolbar>
