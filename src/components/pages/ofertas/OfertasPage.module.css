@@ -17,9 +17,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url("/assets/images/main-background.jpg");
-    background-size: cover;
-    background-position: center; */
 }
   
 .swiperSlide {
@@ -31,30 +28,34 @@ p {
 .swiperSlide div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     width: auto;
 }
 
 .swiperSlide img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-}
-
-.ledesma {
-    width: 800px !important;
+    width: 650px !important;
     height: auto;
     object-fit: contain;
 }
 
-@media (max-width: 850px) {
-    .swiper {
-        height: 200px;
+@media (max-width: 1024px) {
+
+    .swiperSlide img{
+        width: 480px !important;
+        height: auto;
+        object-fit: contain;
     }
 
-    .ledesma {
-        width: 220px !important;
+}
+
+@media (max-width: 768px) {
+    .swiper {
+        height: 220px;
+    }
+
+    .swiperSlide img{
+        width: 180px !important;
         height: auto;
         object-fit: contain;
     }

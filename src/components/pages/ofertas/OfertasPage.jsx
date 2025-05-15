@@ -37,7 +37,7 @@ export const OfertasPage = () => {
           <SwiperSlide className={style.swiperSlide}>            
             <div>
               <img src="\assets\images\torta-portada.png" alt="sign" />
-              <img src="\assets\images\ledesma-portada.png" alt="sign"  className={style.ledesma}/>
+              <img src="\assets\images\ledesma-portada.png" alt="sign"/>
             </div>
           </SwiperSlide>
         </Swiper>

@@ -78,7 +78,7 @@ function Navbar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <img src="\assets\logo-color.png" alt="logo" className={styles.logo}/>
       <Divider />
-      <List>
+      <List sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
         {navItems.map((item, index) => (
           <ListItem key={index} disablePadding onClick={handleNavigate(item.path)}>
             <ListItemButton sx={{ textAlign: 'center' }}>

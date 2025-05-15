@@ -15,7 +15,7 @@ body {
   min-height: 120vh;
   background:
     conic-gradient(
-      from 245deg at 50% 95%,
+      from 245deg at 50% 130%,
       rgb(0, 103, 178, 0.8) 0deg,
       transparent 8deg,
       rgba(0, 103, 178, 0.8) 16deg,
@@ -48,4 +48,5 @@ body {
     linear-gradient(to bottom right, #07539b, #30a9f0);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
