@@ -25,36 +25,50 @@ p {
 .textRowLeft {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     padding: 30px 20px 60px 20px;
     width: 85%;
-    height: 210px;
+    height: 260px;
     border-radius: 0 160px 160px 0;
     margin-top: 30px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 1);
     align-self: flex-start;
+    text-align: center;
+    font-size: 14px;
+    position: relative ;
 }
 
 .textRowRight {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     padding: 30px 20px 60px 20px;
     width: 85%;
-    height: 210px;
+    height: 260px;
     border-radius: 160px 0 0 160px;
     margin-top: 30px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 1);
     align-self: flex-end;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
 }
 
 .textRowIcon {
-    width: 42px;
-    height: 42px;
+    width: 60px;
+    height: 60px;
+    /* sacar esto */
+    border: solid 1px black;
+    position: absolute;
+    top: 30px;
+    left: 65%;
+    transform: translateX(-50%);
 }
   
 .card {
@@ -172,6 +186,12 @@ p {
 
     .portadaimg {
         max-width: 450px;
+        font-size: 12px;
+    }
+    
+    .textRowLeft .textRowRight {
+        height: 210px;
+        font-size: 12px;
     }
 }
 
