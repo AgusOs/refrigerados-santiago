@@ -37,7 +37,7 @@ p {
     box-shadow: 0 0 8px rgba(0, 0, 0, 1);
     align-self: flex-start;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     position: relative ;
 }
 
@@ -56,7 +56,7 @@ p {
     box-shadow: 0 0 8px rgba(0, 0, 0, 1);
     align-self: flex-end;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     position: relative;
 }
 
@@ -67,8 +67,18 @@ p {
     border: solid 1px black;
     position: absolute;
     top: 30px;
-    left: 65%;
+    left: 70%;
     transform: translateX(-50%);
+}
+
+.textRowTitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.textRowText {
+    font-size: 18px;
+    font-weight: 500;
 }
   
 .card {
@@ -83,7 +93,7 @@ p {
 }
   
 .card:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
   
 .cardImage {
@@ -135,6 +145,20 @@ p {
 @media (max-width: 450px) {
     .portada {
         flex-direction: column;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .textRowTitle {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .textRowText {
+        font-size: 12px;
+        font-weight: 500;
     }
 }
 
@@ -192,6 +216,13 @@ p {
     .textRowLeft .textRowRight {
         height: 210px;
         font-size: 12px;
+    }
+
+    .textRowIcon {
+        position: absolute;
+        top: 30px;
+        left: 75%;
+        transform: translateX(-50%);
     }
 }
 

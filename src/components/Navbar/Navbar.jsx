@@ -78,7 +78,7 @@ function Navbar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <img src="\assets\logo-color.png" alt="logo" className={styles.logo}/>
       <Divider />
-      <List sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+      <List>
         {navItems.map((item, index) => (
           <ListItem key={index} disablePadding onClick={handleNavigate(item.path)}>
             <ListItemButton sx={{ textAlign: 'center' }}>
@@ -118,7 +118,7 @@ function Navbar(props) {
                 <InstagramIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
               </a>
             </div>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Box sx={{ display: { xs: 'none', sm: 'block' }, position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
               {navItems.map((item, index) => (
                 <Button key={index} sx={{ color: '#fff' }} onClick={handleNavigate(item.path)}>
                   <b>{item.name}</b>

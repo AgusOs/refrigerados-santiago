@@ -54,7 +54,7 @@ export const ComoComprarPage = () => {
         <div className={styles.textRowRight}>
           <img src="/assets/images/icono1.png" alt="icon" className={styles.textRowIcon} />
           <p className={styles.textRowTitle}>
-            <strong>PRODUCTOS FRESCOS Y DE CALIDAD</strong>
+            PRODUCTOS FRESCOS Y DE CALIDAD
           </p>
           <br/>
           <p className={styles.textRowText}>
@@ -64,7 +64,7 @@ export const ComoComprarPage = () => {
         </div>
         <div className={styles.textRowLeft}>
           <p className={styles.textRowTitle}>
-            <strong>OFERTAS Y PROMOCIONES</strong>
+            OFERTAS Y PROMOCIONES
           </p>
           <img src="/assets/images/icono2.png" alt="icon" className={styles.textRowIcon} />
           <br/>
@@ -75,7 +75,7 @@ export const ComoComprarPage = () => {
         <div className={styles.textRowRight}>
           <img src="/assets/images/icono3.png" alt="icon" className={styles.textRowIcon} />
           <p className={styles.textRowTitle}>
-            <strong>DISTRIBUCION Y LOGISTICA</strong>
+            DISTRIBUCION Y LOGISTICA
           </p>
           <br/>
           <p className={styles.textRowText}>
@@ -86,7 +86,7 @@ export const ComoComprarPage = () => {
         </div>
         <div className={styles.textRowLeft}>
           <p className={styles.textRowTitle}>
-            <strong>OPCIONES DE COMPRA FLEXIBLES</strong>
+            OPCIONES DE COMPRA FLEXIBLES
           </p>
           <img src="/assets/images/icono4.png" alt="icon" className={styles.textRowIcon} />
           <br/>
@@ -98,7 +98,7 @@ export const ComoComprarPage = () => {
         <div className={styles.textRowRight}>
           <img src="/assets/images/icono5.png" alt="icon" className={styles.textRowIcon} />
           <p className={styles.textRowTitle}>
-            <strong>PRECIOS COMPETITIVOS</strong>
+            PRECIOS COMPETITIVOS
           </p>
           <br/>
           <p className={styles.textRowText}>
@@ -108,7 +108,7 @@ export const ComoComprarPage = () => {
         </div>
         <div className={styles.textRowLeft}>        
           <p className={styles.textRowTitle}>
-            <strong>OPCIONES DE PAGO</strong>
+            OPCIONES DE PAGO
           </p>
           <img src="/assets/images/icono6.png" alt="icon" className={styles.textRowIcon} />
           <br/>
