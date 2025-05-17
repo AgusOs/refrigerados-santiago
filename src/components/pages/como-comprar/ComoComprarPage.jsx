@@ -52,32 +52,37 @@ export const ComoComprarPage = () => {
       </div>
       <div className={styles.textRowContainer}>
         <div className={styles.textRowRight}>
-          <img src="/assets/images/icono1.png" alt="icon" className={styles.textRowIcon} />
-          <p className={styles.textRowTitle}>
-            PRODUCTOS FRESCOS Y DE CALIDAD
-          </p>
-          <br/>
+          <div style={{display: "flex", alignItems: "center"}}>
+            <img src="/assets/images/icono1.png" alt="icon" className={styles.textRowIcon} />
+            <p className={styles.textRowTitle}>
+              PRODUCTOS FRESCOS Y DE CALIDAD
+            </p>
+          </div>
           <p className={styles.textRowText}>
             Nuestros productos son seleccionados para ofrecerte siempre la mejor calidad.<br/>
-            Trabajamos con proveedores de confianza para que cada artículo que recibas cumpla con los estándares más altos.
+            Trabajamos con proveedores de confianza para que cada artículo que recibas <br/>
+            cumpla con los estándares más altos.
           </p>
         </div>
         <div className={styles.textRowLeft}>
-          <p className={styles.textRowTitle}>
-            OFERTAS Y PROMOCIONES
-          </p>
-          <img src="/assets/images/icono2.png" alt="icon" className={styles.textRowIcon} />
-          <br/>
+          <div style={{display: "flex", alignItems: "center"}}>
+            <p className={styles.textRowTitle}>
+              OFERTAS Y PROMOCIONES
+            </p>
+            <img src="/assets/images/icono2.png" alt="icon" className={styles.textRowIcon} />
+          </div>
           <p className={styles.textRowText}>
-            Cada semana te traemos descuentos y beneficios especiales para que aproveches los mejosres precios.
+            Cada semana te traemos descuentos y beneficios especiales<br/>
+             para que aproveches los mejosres precios.
           </p>
         </div>
         <div className={styles.textRowRight}>
-          <img src="/assets/images/icono3.png" alt="icon" className={styles.textRowIcon} />
-          <p className={styles.textRowTitle}>
-            DISTRIBUCION Y LOGISTICA
-          </p>
-          <br/>
+          <div style={{display: "flex", alignItems: "center"}}>
+            <img src="/assets/images/icono3.png" alt="icon" className={styles.textRowIcon} />
+            <p className={styles.textRowTitle}>
+              DISTRIBUCION Y LOGISTICA
+            </p>
+          </div>
           <p className={styles.textRowText}>
             Contamos con logistica propia y servicio de entrega.<br/>
             Se le dan los cuidados necesarios a la mercaderia para que los productos lleguen<br/>
@@ -85,35 +90,40 @@ export const ComoComprarPage = () => {
           </p>
         </div>
         <div className={styles.textRowLeft}>
-          <p className={styles.textRowTitle}>
-            OPCIONES DE COMPRA FLEXIBLES
-          </p>
-          <img src="/assets/images/icono4.png" alt="icon" className={styles.textRowIcon} />
-          <br/>
+          <div style={{display: "flex", alignItems: "center"}}>
+            <p className={styles.textRowTitle}>
+              OPCIONES DE COMPRA FLEXIBLES
+            </p>
+            <img src="/assets/images/icono4.png" alt="icon" className={styles.textRowIcon} />
+          </div>
           <p className={styles.textRowText}>
             Te ofrecemos opciones de compra flexibles, diseñadas para ajustarse a tus necesidades.<br/>
-            Nos adaptamos a la frecuencia y volumen de tus compras para que siempre encuentres lo que buscas.
+            Nos adaptamos a la frecuencia y volumen de tus compras<br/>
+             para que siempre encuentres lo que buscas.
           </p>
         </div>
         <div className={styles.textRowRight}>
-          <img src="/assets/images/icono5.png" alt="icon" className={styles.textRowIcon} />
-          <p className={styles.textRowTitle}>
-            PRECIOS COMPETITIVOS
-          </p>
-          <br/>
+          <div style={{display: "flex", alignItems: "center"}}>
+            <img src="/assets/images/icono5.png" alt="icon" className={styles.textRowIcon} />
+            <p className={styles.textRowTitle}>
+              PRECIOS COMPETITIVOS
+            </p>
+          </div>
           <p className={styles.textRowText}>
             Precios accesibles para ofrecer la mejor relacion entre costo y calidad.<br/>
             ¡Te convienen más!
           </p>
         </div>
         <div className={styles.textRowLeft}>        
-          <p className={styles.textRowTitle}>
-            OPCIONES DE PAGO
-          </p>
-          <img src="/assets/images/icono6.png" alt="icon" className={styles.textRowIcon} />
-          <br/>
+          <div style={{display: "flex", alignItems: "center"}}>
+            <p className={styles.textRowTitle}>
+              OPCIONES DE PAGO
+            </p>
+            <img src="/assets/images/icono6.png" alt="icon" className={styles.textRowIcon} />
+          </div>
           <p className={styles.textRowText}>
-            Ofrecemos una amplia variedad de opciones de pagopara que puedas elegir la que mas te convenga.
+            Ofrecemos una amplia variedad de opciones de pago<br/>
+            para que puedas elegir la que mas te convenga.
           </p>
         </div>
       </div>

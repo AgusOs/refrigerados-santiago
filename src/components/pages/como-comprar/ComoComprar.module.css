@@ -24,7 +24,7 @@ p {
 }
 .textRowLeft {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@ p {
 
 .textRowRight {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -59,14 +59,8 @@ p {
 }
 
 .textRowIcon {
-    width: 60px;
-    height: 60px;
-    /* sacar esto */
-    border: solid 1px black;
-    position: absolute;
-    top: 30px;
-    left: 70%;
-    transform: translateX(-50%);
+    width: 75px;
+    height: auto;
 }
 
 .textRowTitle {
@@ -214,13 +208,6 @@ p {
     .textRowLeft .textRowRight {
         height: 210px;
         font-size: 12px;
-    }
-
-    .textRowIcon {
-        position: absolute;
-        top: 30px;
-        left: 75%;
-        transform: translateX(-50%);
     }
 }
 
