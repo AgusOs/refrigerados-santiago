@@ -35,7 +35,7 @@ export const Carousel = () => {
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>GASEOSA MAMANOS 3lts</p>
+          <p>GASEOSA MANAOS 3lts</p>
         </div>
         <img src="/assets/ofertas/3.png" alt="oferta3" />
       </SwiperSlide>
