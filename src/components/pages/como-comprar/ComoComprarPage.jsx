@@ -8,13 +8,13 @@ export const ComoComprarPage = () => {
     <div className={styles.container}>
         <Slide direction="left" in={true} timeout={1000} mountOnEnter unmountOnExit>
           <div className={styles.portada}>
-            <img src="\assets\images\comprar-img.png" alt="img" className={styles.portadaimg} />
-            <img src="\assets\images\comprar-sign.png" alt="sign" className={styles.portadaimg}/>
+            <img src="\assets\images\comprar-img.webp" alt="img" className={styles.portadaimg} />
+            <img src="\assets\images\comprar-sign.webp" alt="sign" className={styles.portadaimg}/>
           </div>
         </Slide>
       <div className={styles.cardsRow}>
         <div className={styles.card}>
-          <img src="/assets/images/1.png" alt="Carrito de compras" className={styles.cardImage} />
+          <img src="/assets/images/1.webp" alt="Carrito de compras" className={styles.cardImage} />
           <p className={styles.cardTitle}>
             Consumidor final
           </p>
@@ -23,7 +23,7 @@ export const ComoComprarPage = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <img src="/assets/images/2.png" alt="img"  className={styles.cardImage}/>
+          <img src="/assets/images/2.webp" alt="img"  className={styles.cardImage}/>
           <p className={styles.cardTitle}>
             Profesionales gastronómicos
           </p>
@@ -32,7 +32,7 @@ export const ComoComprarPage = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <img src="/assets/images/3.png" alt="img"  className={styles.cardImage}/>
+          <img src="/assets/images/3.webp" alt="img"  className={styles.cardImage}/>
           <p className={styles.cardTitle}>
             Comerciantes
           </p>
@@ -41,7 +41,7 @@ export const ComoComprarPage = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <img src="/assets/images/4.png" alt="img"  className={styles.cardImage}/>
+          <img src="/assets/images/4.webp" alt="img"  className={styles.cardImage}/>
           <p className={styles.cardTitle}>
             Venta a instituciones
           </p>
@@ -53,7 +53,7 @@ export const ComoComprarPage = () => {
       <div className={styles.textRowContainer}>
         <div className={styles.textRowRight}>
           <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono1.png" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono1.webp" alt="icon" className={styles.textRowIcon} />
             <p className={styles.textRowTitle}>
               PRODUCTOS FRESCOS Y DE CALIDAD
             </p>
@@ -69,7 +69,7 @@ export const ComoComprarPage = () => {
             <p className={styles.textRowTitle}>
               OFERTAS Y PROMOCIONES
             </p>
-            <img src="/assets/images/icono2.png" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono2.webp" alt="icon" className={styles.textRowIcon} />
           </div>
           <p className={styles.textRowText}>
             Cada semana te traemos descuentos y beneficios especiales<br/>
@@ -78,7 +78,7 @@ export const ComoComprarPage = () => {
         </div>
         <div className={styles.textRowRight}>
           <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono3.png" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono3.webp" alt="icon" className={styles.textRowIcon} />
             <p className={styles.textRowTitle}>
               DISTRIBUCION Y LOGISTICA
             </p>
@@ -94,7 +94,7 @@ export const ComoComprarPage = () => {
             <p className={styles.textRowTitle}>
               OPCIONES DE COMPRA FLEXIBLES
             </p>
-            <img src="/assets/images/icono4.png" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono4.webp" alt="icon" className={styles.textRowIcon} />
           </div>
           <p className={styles.textRowText}>
             Te ofrecemos opciones de compra flexibles, diseñadas para ajustarse a tus necesidades.<br/>
@@ -104,7 +104,7 @@ export const ComoComprarPage = () => {
         </div>
         <div className={styles.textRowRight}>
           <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono5.png" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono5.webp" alt="icon" className={styles.textRowIcon} />
             <p className={styles.textRowTitle}>
               PRECIOS COMPETITIVOS
             </p>
@@ -119,7 +119,7 @@ export const ComoComprarPage = () => {
             <p className={styles.textRowTitle}>
               OPCIONES DE PAGO
             </p>
-            <img src="/assets/images/icono6.png" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono6.webp" alt="icon" className={styles.textRowIcon} />
           </div>
           <p className={styles.textRowText}>
             Ofrecemos una amplia variedad de opciones de pago<br/>

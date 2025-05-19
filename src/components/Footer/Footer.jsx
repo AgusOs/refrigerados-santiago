@@ -9,7 +9,7 @@ export const Footer = () => {
     <div className={styles.container}>
       <div className={styles.footer}>
           <div className={styles.logocontainer}>
-              <img src="\assets\logo-blanco.png" alt="logo" className='logo'/>
+              <img src="\assets\logo-blanco.webp" alt="logo" className='logo'/>
           </div>
           <div className={styles.socialscontainer}>
             <a href="https://www.facebook.com/refrigeradosantiago" target="_blank" rel="noopener noreferrer">
