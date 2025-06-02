@@ -73,11 +73,27 @@
     background-color: #0273a0;
 }
 
+.contactar {
+    background-color: #25D366;
+    cursor: pointer;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.contactar:hover {
+    background-color: #22bb5a;
+}
+
 @media (max-width: 1024px) {
     .mapaContainer {
         flex-direction: column;
         width: 95%;
-        margin: 10px;
+        margin: 30px;
     }
 
     .mapa {

@@ -23,43 +23,43 @@ export const Carousel = () => {
     <Swiper {...config} className={style.swiper}>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>YOGURT BEBIBLE MILKAUT</p>
+          <p>MORTADELA PALADINI 4,5Kg</p>
         </div>
         <img src="/assets/ofertas/1.webp" alt="oferta1" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>MATE COCIDO YERVITA x25 U</p>
+          <p>RAVIOLES TAPA MANIA 1Kg</p>
         </div>
         <img src="/assets/ofertas/2.webp" alt="oferta2" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>MAYONESA FANACOA x2,75 KG</p>
+          <p>SALCHICHAS JEED FOOD x6U</p>
         </div>
         <img src="/assets/ofertas/3.webp" alt="oferta3" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>MANTELES INDIVIDUALES FELPITA<br/>ROLLO x70 UNIDADES</p>
+          <p>PURE DE TOMATES DOÑA PUPA 520gr</p>
         </div>
         <img src="/assets/ofertas/4.webp" alt="oferta4" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>YERBA AMANDA x1 KG</p>
+          <p>MAYONESA CAÑUELAS 2,9Kg</p>
         </div>
         <img src="/assets/ofertas/5.webp" alt="oferta5" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>QUESO EN BARRA MILKAUT</p>
+          <p>FIDEOS GUISEROS MAROLIO 500gr</p>
         </div>
         <img src="/assets/ofertas/6.webp" alt="oferta6" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>MANTECA DON FELIX x200 GRS</p>
+          <p>TALLARINES MAROLIO 500gr</p>
         </div>
         <img src="/assets/ofertas/7.webp" alt="oferta6" />
       </SwiperSlide>

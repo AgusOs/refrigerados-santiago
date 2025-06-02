@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import { useState,useRef } from 'react';
 import { mapConfig, customIcon } from './mapaConfig';
 import { useMap } from 'react-leaflet';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import style from './Mapa.module.css'
 import { sucursales } from '../../../sucursales';
+import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 
 
 const MapController = ({ coords }) => {
@@ -19,8 +20,9 @@ const MapController = ({ coords }) => {
 
 export const Mapa = () => {
 
-  const [activeCoords, setActiveCoords] = React.useState(null);
+  const [activeCoords, setActiveCoords] = useState(null);
   const markerRefs = useRef([]);
+  const [ciudad, setCiudad] = useState('');
 
   return (
     <div className={style.mapaContainer}>
@@ -58,11 +60,38 @@ export const Mapa = () => {
       </MapContainer>
 
       <div className={style.sucursales}>
-        {sucursales.map((sucursal, index) => (
+        <FormControl fullWidth>
+          <InputLabel id="ciudad-label"> Seleccionar ubicacion</InputLabel>
+          <Select
+            labelId="ciudad-label"
+            id="select-ciudad"
+            label="Seleccionar ubicacion"
+            value={ciudad}
+            onChange={(event) => setCiudad(event.target.value)}
+          >
+            <MenuItem value="Santa Rosa">Santa Rosa</MenuItem>
+            <MenuItem value="Toay">Toay</MenuItem>
+            <MenuItem value="Pico">Gral. Pico</MenuItem>
+            <MenuItem value="Catriló">Catrilo</MenuItem>
+            <MenuItem value="Realicó">Realico</MenuItem>
+            <MenuItem value="Macachín">Macachín</MenuItem>
+            <MenuItem value="Castex">Castex</MenuItem>
+            <MenuItem value="Gral. Acha">Gral. Acha</MenuItem>
+            <MenuItem value="Victorica">Victorica</MenuItem>
+          </Select>
+        </FormControl>
+        {sucursales
+        .filter(sucursal => ciudad !== '' && sucursal.nombre.includes(ciudad))
+        .map((sucursal, index) => (
           <div key={index} className={style.sucursalItem}>
             <strong>{sucursal.nombre}</strong>
             Dirección: {sucursal.direccion}<br />
-            WhatsApp: <a href={`https://wa.me/549${sucursal.whatsapp}`} style={{ color: 'black', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">{sucursal.telefono}</a><br />
+            <button className={style.contactar}>
+              <a href={`https://wa.me/549${sucursal.whatsapp}`} style={{ color: 'white', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
+                Contactar
+              </a>
+            </button>
+            <br />
             <button
               className={style.verEnMapa}
               onClick={() => {
