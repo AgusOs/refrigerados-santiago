@@ -98,11 +98,11 @@ export const sucursales = [
       whatsapp: "2331401204",
       coords: [-35.03523275572147, -64.24767280314268]
     },
-    {
-      nombre: "Victorica",
-      direccion: "Calle 26 #710",
-      telefono: "2954 51-0048",
-      whatsapp: "2954510048",
-      coords: [-36.219802168801486, -65.43084177050169]
-    }
+    // {
+    //   nombre: "Victorica",
+    //   direccion: "Calle 26 #710",
+    //   telefono: "2954 51-0048",
+    //   whatsapp: "2954510048",
+    //   coords: [-36.219802168801486, -65.43084177050169]
+    // }
   ];
