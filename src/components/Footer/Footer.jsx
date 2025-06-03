@@ -24,8 +24,9 @@ export const Footer = () => {
           </div>
       </div>
       <div className={styles.footertext}>
-        <h3>Oficina central: Cam. Interno Zona Industrial, Santa Rosa, La Pampa, Argentina.</h3>
-        <h5>Tel: ‪+54 9 2954 27-3864‬ //  DE LUNES A VIERNES DE 8 A 17 hs , SÁBADOS DE 8 A 13:30 hs</h5>
+        <h2>Más de 60 años acompañando a locales gastronómicos de La Pampa con productos refrigerados y congelados de calidad</h2>
+        <h4>Parque Industrial, Calle 2 2850, L6304FXB Santa Rosa, La Pampa /Tel: +54 9 2954 27-3864 //  DE LUNES A VIERNES DE 8 A 17 hs , SÁBADOS DE 8 A 13:30 hs</h4>
+        <h6>2025 Grupo Santiago – Todos los derechos reservados</h6>
       </div>
     </div>
   )

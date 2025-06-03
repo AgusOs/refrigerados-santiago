@@ -82,7 +82,9 @@ export const Mapa = () => {
         </FormControl>
         {sucursales
         .filter(sucursal => ciudad !== '' && sucursal.nombre.includes(ciudad))
-        .map((sucursal, index) => (
+        .map((sucursal, index) => {
+          const markerIndex = sucursales.findIndex(s => s.nombre === sucursal.nombre);
+          return(
           <div key={index} className={style.sucursalItem}>
             <strong>{sucursal.nombre}</strong>
             Dirección: {sucursal.direccion}<br />
@@ -95,7 +97,7 @@ export const Mapa = () => {
             <button
               className={style.verEnMapa}
               onClick={() => {
-                const marker = markerRefs.current[index];
+                const marker = markerRefs.current[markerIndex];
                 if (marker) {
                   marker.openPopup();
                 }
@@ -105,7 +107,7 @@ export const Mapa = () => {
               Ver en mapa
             </button>
           </div>
-        ))}
+        )})}
       </div>
     </div>
   );
