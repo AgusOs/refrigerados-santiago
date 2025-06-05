@@ -43,6 +43,7 @@ export const OfertasPage = () => {
         </Swiper>
         <Ofertas/>
         <Banner img={'/assets/images/banner-bdlp.webp'} variant={"blp"}/>
+        <Banner img={'/assets/images/horarios.webp'} variant={"blp"}/>
       </div>
     )
 }

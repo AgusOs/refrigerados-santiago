@@ -24,7 +24,13 @@ export const Footer = () => {
               </a>
             </div>
             <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="https://mail.google.com/mail/?view=cm&fs=1&to=cv@refrigeradosantiago.com.ar" target="_blank" rel="noopener noreferrer">
-              Sumate a la empresa
+              Búsquedas laborales
+            </a>
+            <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="/empresa" rel="noopener noreferrer">
+              Sobre nosotros
+            </a>
+            <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="/sucursales" rel="noopener noreferrer">
+              Sucursales
             </a>
           </div>
       </div>

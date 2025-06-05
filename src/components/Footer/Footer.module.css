@@ -2,7 +2,9 @@
     background-color: rgb(1, 127, 175);
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
+
 .footer {
     background-color: rgb(1, 127, 175);
     color: white;
@@ -13,6 +15,7 @@
 }
   
 .socialscontainer {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
 }

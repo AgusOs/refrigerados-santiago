@@ -10,8 +10,8 @@ export const SucursalesPage = () => {
         <Slide in={true} direction="left" timeout={1000} mountOnEnter unmountOnExit>
           <img src="\assets\images\phone-sign.webp" alt="Portada"/>
         </Slide>
+        <Mapa/>
       </div>
-      <Mapa/>
     </div>
   )
 }
