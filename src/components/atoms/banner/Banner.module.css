@@ -8,11 +8,11 @@
 }
 
 .bannerBlp {
-  width: 90% !important;
+  width: 98% !important;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: rgba(230, 230, 230, 0.8);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+  /* background-color: rgba(230, 230, 230, 0.8); */
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 1); */
 
 }
 

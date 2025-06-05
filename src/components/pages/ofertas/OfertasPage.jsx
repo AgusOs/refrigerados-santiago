@@ -29,21 +29,24 @@ export const OfertasPage = () => {
       <div className={style.container}>
         <Swiper {...config} className={style.swiper}>
           <SwiperSlide className={style.swiperSlide}>
-            <div>
-              <img src="\assets\images\portada-sign1.webp" alt="sign"/>
-              <img src="\assets\images\carrito-portada.webp" alt="sign" />
+            <div className={style.portada}>
+              <img src="\assets\images\empresa-portada1.webp" alt="portada1" />
+              <img src="\assets\images\empresa-portada2.webp" alt="portada2" />
             </div>
           </SwiperSlide>
           <SwiperSlide className={style.swiperSlide}>            
-            <div>
-              <img src="\assets\images\torta-portada.webp" alt="sign" />
-              <img src="\assets\images\ledesma-portada.webp" alt="sign"/>
+            <div className={style.portada}>
+              <img src="\assets\images\torta-portada.png" alt="sign" />
+              <div className={style.ledesma}>
+                <img src="\assets\images\ledesma-portada.webp" alt="sign"/>
+                <img src="\assets\images\32.png" alt="sign"/>
+              </div>
             </div>
           </SwiperSlide>
         </Swiper>
         <Ofertas/>
-        <Banner img={'/assets/images/banner-bdlp.webp'} variant={"blp"}/>
-        <Banner img={'/assets/images/horarios.webp'} variant={"blp"}/>
+        <Banner img={'/assets/images/horarios.png'} variant={"blp"}/>
+        <Banner img={'/assets/images/banner-bdlp.jpg'} variant={"blp"}/>
       </div>
     )
 }

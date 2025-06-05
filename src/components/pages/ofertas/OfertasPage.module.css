@@ -9,7 +9,7 @@ p {
     align-items: center;
     justify-content: center;
 }
-  
+
 /* Swiper banner ppal */
 .swiper {
     width: 100%;
@@ -18,46 +18,99 @@ p {
     justify-content: center;
     align-items: center;
 }
-  
+
 .swiperSlide {
     display: flex;
     height: 100%;
     width: auto;
+    justify-content: center;
 }
-
-.swiperSlide div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 100%;
+    
+.portada{
     width: auto;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    gap: 20px;
 }
 
-.swiperSlide img {
-    width: 650px !important;
+.portada img {
+    width: 50%;
     height: auto;
     object-fit: contain;
+    border-radius: 8px;
+}
+
+.ledesma{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 @media (max-width: 1024px) {
 
-    .swiperSlide img{
-        width: 480px !important;
-        height: auto;
-        object-fit: contain;
+    .swiper{
+        height: 85vh;
+    }
+    
+    .portada {
+        height: 85vh;
+        flex-direction: column;
     }
 
+    .portada img {
+        width: 60%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .ledesma {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ledesma img {
+        width: 40%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+    }
 }
 
 @media (max-width: 768px) {
-    .swiper {
-        height: 220px;
+
+    .portada {
+        display: flex;
+        height: 45vh;
+        flex-direction: column !important;
     }
 
-    .swiperSlide img{
-        width: 180px !important;
+    .portada img {
+        width: auto;
+        height: 40%;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .swiper {
+        height: 45vh;
+    }
+
+    .ledesma {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .ledesma img {
+        width: 50%;
         height: auto;
         object-fit: contain;
+        border-radius: 8px;
     }
 
 }

@@ -30,12 +30,10 @@
 .tabs{
     display: flex;
     justify-content: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    align-items: center;
 }
 
-.tabs > button {
+.tabs button {
     background-color: #017FAF;
     border: none;
     color: white;

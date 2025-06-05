@@ -8,8 +8,8 @@ export const ComoComprarPage = () => {
     <div className={styles.container}>
         <Slide direction="left" in={true} timeout={1000} mountOnEnter unmountOnExit>
           <div className={styles.portada}>
-            <img src="\assets\images\comprar-img.webp" alt="img" className={styles.portadaimg} />
-            <img src="\assets\images\comprar-sign.webp" alt="sign" className={styles.portadaimg}/>
+            <img src="\assets\images\comprar-img.jpg" alt="img"/>
+            <img src="\assets\images\comprar-sign.webp" alt="sign"/>
           </div>
         </Slide>
       <div className={styles.cardsRow}>
