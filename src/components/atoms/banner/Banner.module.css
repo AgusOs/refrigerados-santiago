@@ -7,6 +7,12 @@
     display: block;
 }
 
+.bannerBlp {
+  width: 90% !important;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
     .banner {
       height: 180px; 
@@ -19,13 +25,14 @@
     }
 
     .bannerBlp{
-        width: 100%;
+        width: 90%;
         height: auto;
         display: block;
         max-height: 400px;
         object-fit: cover;
         object-position: center;
         display: block;
+        border-radius: 10px;
     }
 
     /* .bannerInicio1 {

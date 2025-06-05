@@ -6,14 +6,12 @@ p {
 .cardsRow {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: flex-start;
-    background-color: white;
-    padding: 30px 20px 60px 20px;
-    width: 85%;
-    border-radius: 0 160px 160px 0;
+    /* padding: 30px 20px 60px 20px; */
+    /* width: 85%; */
+    /* border-radius: 0 160px 160px 0; */
     margin-top: 30px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
 }
 
 .textRowContainer {
@@ -29,8 +27,8 @@ p {
     justify-content: center;
     align-items: center;
     background-color: white;
-    padding: 30px 20px 60px 20px;
-    width: 85%;
+    padding: 45px 20px 45px 20px;
+    width: 65%;
     height: 260px;
     border-radius: 0 160px 160px 0;
     margin-top: 30px;
@@ -47,8 +45,8 @@ p {
     justify-content: center;
     align-items: center;
     background-color: white;
-    padding: 30px 20px 60px 20px;
-    width: 85%;
+    padding: 45px 20px 45px 20px;
+    width: 65%;
     height: 260px;
     border-radius: 160px 0 0 160px;
     margin-top: 30px;
@@ -83,7 +81,11 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
     width: 280px;
+    height: 290px;
+    border-radius: 8px;
     margin: 10px;
     position: relative;
     transition: transform 0.1s ease-in-out;
@@ -101,23 +103,20 @@ p {
 }
   
 .cardTitle {
-    font-weight: 600;
+    font-weight: 800;
     font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 2px;
-    position: absolute;
-    bottom: 0px;
 }
   
 .cardText {
+    font-weight: 600;
     font-size: 14px;
     max-width: 220px;
     line-height: 1.4;
     margin-top: 5px;
-    position: absolute;
-    bottom: -55px;
 }
 
 /* Sections */
@@ -169,7 +168,8 @@ p {
     }
 
     .card {
-      width: 240px;
+      width: 210px;
+      height: 220px;
     }
 
     .cardTitle {
@@ -200,6 +200,14 @@ p {
 }
 
 @media (max-width: 1024px) {
+
+    .card {
+      width: 210px;
+      height: 220px;
+      align-items: center;
+      justify-content: center;
+    }
+
     .cardText {
       display: none;
     }
@@ -212,12 +220,6 @@ p {
     .textRowLeft .textRowRight {
         height: 210px;
         font-size: 12px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1565px) {
-    .card {
-      width: 20%;
     }
 }
 
