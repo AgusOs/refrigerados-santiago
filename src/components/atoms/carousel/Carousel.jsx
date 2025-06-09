@@ -35,19 +35,19 @@ export const Carousel = () => {
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>SALCHICHAS JEED FOOD x6U</p>
+          <p>SALCHICHAS FELA x6u</p>
         </div>
         <img src="/assets/ofertas/3.webp" alt="oferta3" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>PURE DE TOMATES DOÑA PUPA 520gr</p>
+          <p>YOUGURT SACHET MILKAUT</p>
         </div>
         <img src="/assets/ofertas/4.webp" alt="oferta4" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>MAYONESA CAÑUELAS 2,9Kg</p>
+          <p>AZÚCAR LEDESMA 1Kg</p>
         </div>
         <img src="/assets/ofertas/5.webp" alt="oferta5" />
       </SwiperSlide>
@@ -62,6 +62,12 @@ export const Carousel = () => {
           <p>TALLARINES MAROLIO 500gr</p>
         </div>
         <img src="/assets/ofertas/7.webp" alt="oferta6" />
+      </SwiperSlide>
+      <SwiperSlide className={style.swiperSlide}>
+        <div className={style.title}>
+          <p>SHAMPOO FREAK 400ml</p>
+        </div>
+        <img src="/assets/ofertas/8.webp" alt="oferta6" />
       </SwiperSlide>
       {isDesktop && (
         <>

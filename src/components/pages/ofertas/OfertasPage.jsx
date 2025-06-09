@@ -38,7 +38,7 @@ export const OfertasPage = () => {
             <div className={style.portada}>
               <img src="\assets\images\torta-portada.png" alt="sign" />
               <div className={style.ledesma}>
-                <img src="\assets\images\ledesma-portada.webp" alt="sign"/>
+                <img src="\assets\ofertas\5.webp" alt="sign"/>
                 <img src="\assets\images\32.png" alt="sign"/>
               </div>
             </div>
