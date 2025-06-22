@@ -42,9 +42,8 @@
     color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .footertext {
-        position: relative;
-        bottom: 0;
+        display: none;
     }
 }

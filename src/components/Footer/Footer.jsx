@@ -11,6 +11,12 @@ export const Footer = () => {
           <div className={styles.logocontainer}>
               <img src="\assets\logo-blanco.webp" alt="logo" className='logo'/>
           </div>
+          <div className={styles.footertext}>
+            <h2>Más de 60 años acompañando a locales gastronómicos de La Pampa con productos refrigerados y congelados de calidad</h2>
+            <h4>Parque Industrial, Calle 2 2850, L6304FXB Santa Rosa, La Pampa </h4>
+            {/* <h4> Tel: +54 9 2954 27-3864</h4> */}
+            <h6>2025 Santiago – Todos los derechos reservados</h6>
+          </div>
           <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
             <div className={styles.socialscontainer}>
               <a href="https://www.facebook.com/refrigeradosantiago" target="_blank" rel="noopener noreferrer">
@@ -33,12 +39,6 @@ export const Footer = () => {
               Sucursales
             </a>
           </div>
-      </div>
-      <div className={styles.footertext}>
-        <h2>Más de 60 años acompañando a locales gastronómicos de La Pampa con productos refrigerados y congelados de calidad</h2>
-        <h4>Parque Industrial, Calle 2 2850, L6304FXB Santa Rosa, La Pampa </h4>
-        {/* <h4> Tel: +54 9 2954 27-3864</h4> */}
-        <h6>2025 Santiago – Todos los derechos reservados</h6>
       </div>
     </div>
   )
