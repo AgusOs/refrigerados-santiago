@@ -76,7 +76,7 @@ export const Mapa = () => {
             <MenuItem value="Realicó">Realico</MenuItem>
             <MenuItem value="Macachín">Macachín</MenuItem>
             <MenuItem value="Castex">Castex</MenuItem>
-            <MenuItem value="Gral. Acha">Gral. Acha</MenuItem>
+            <MenuItem value="Acha">Gral. Acha</MenuItem>
             {/* <MenuItem value="Victorica">Victorica</MenuItem> */}
           </Select>
         </FormControl>

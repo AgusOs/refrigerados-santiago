@@ -43,6 +43,12 @@ export const OfertasPage = () => {
               </div>
             </div>
           </SwiperSlide>
+          <SwiperSlide className={style.swiperSlide}>            
+            <div className={style.portada}>
+              <img src="\assets\images\villamanaos.webp" alt="sign" />
+              <img src="\assets\images\agua-natural.webp" alt="portada2" />
+            </div>
+          </SwiperSlide>
         </Swiper>
         <Ofertas/>
         <Banner img={'/assets/images/horarios.png'} variant={"blp"}/>
