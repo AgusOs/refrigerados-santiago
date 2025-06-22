@@ -48,6 +48,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 50%;
 }
 
 @media (max-width: 1024px) {
@@ -73,6 +74,7 @@ p {
         align-items: center;
         justify-content: center;
         height: 40%;
+        width: auto;
     }
 
     .ledesma img {
@@ -84,6 +86,41 @@ p {
 }
 
 @media (max-width: 768px) {
+
+    .portada {
+        display: flex;
+        height: 45vh;
+        flex-direction: column !important;
+    }
+
+    .portada img {
+        width: auto;
+        height: 45%;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .swiper {
+        height: 45vh;
+    }
+
+    .ledesma {
+        flex-direction: row;
+        align-items: center;
+        height: 40%;
+        width: auto;
+    }
+
+    .ledesma img {
+        width: 35%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+}
+
+@media (max-width: 420px) {
 
     .portada {
         display: flex;
@@ -105,6 +142,8 @@ p {
     .ledesma {
         flex-direction: row;
         align-items: center;
+        height: 40%;
+        width: auto;
     }
 
     .ledesma img {
