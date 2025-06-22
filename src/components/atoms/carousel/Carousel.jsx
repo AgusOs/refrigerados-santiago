@@ -23,13 +23,13 @@ export const Carousel = () => {
     <Swiper {...config} className={style.swiper}>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>MORTADELA PALADINI 4,5Kg</p>
+          <p>MILKAUT CREMA DOBLE 200cc</p>
         </div>
         <img src="/assets/ofertas/1.webp" alt="oferta1" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>RAVIOLES TAPA MANIA 1Kg</p>
+          <p>DULCE DE LECHE MILKAUT 400gr</p>
         </div>
         <img src="/assets/ofertas/2.webp" alt="oferta2" />
       </SwiperSlide>
@@ -41,7 +41,7 @@ export const Carousel = () => {
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>YOUGURT SACHET MILKAUT</p>
+          <p>VINO TORO CLÁSICO</p>
         </div>
         <img src="/assets/ofertas/4.webp" alt="oferta4" />
       </SwiperSlide>
@@ -53,21 +53,15 @@ export const Carousel = () => {
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>FIDEOS GUISEROS MAROLIO 500gr</p>
+          <p>GASEOSA MANAOS 2,25Lts</p>
         </div>
         <img src="/assets/ofertas/6.webp" alt="oferta6" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>TALLARINES MAROLIO 500gr</p>
+          <p>DETERGENTE HÉROE 750ml</p>
         </div>
         <img src="/assets/ofertas/7.webp" alt="oferta6" />
-      </SwiperSlide>
-      <SwiperSlide className={style.swiperSlide}>
-        <div className={style.title}>
-          <p>SHAMPOO FREAK 400ml</p>
-        </div>
-        <img src="/assets/ofertas/8.webp" alt="oferta6" />
       </SwiperSlide>
       {isDesktop && (
         <>
