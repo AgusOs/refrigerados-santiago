@@ -13,69 +13,6 @@ p {
     /* border-radius: 0 160px 160px 0; */
     margin-top: 30px;
 }
-
-.textRowContainer {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    padding-bottom: 40px ;
-}
-
-.textRowLeft {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 45px 20px 45px 20px;
-    width: 65%;
-    height: 260px;
-    border-radius: 0 160px 160px 0;
-    margin-top: 30px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
-    align-self: flex-start;
-    text-align: center;
-    position: relative ;
-}
-
-.textRowRight {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 45px 20px 45px 20px;
-    width: 65%;
-    height: 260px;
-    border-radius: 160px 0 0 160px;
-    margin-top: 30px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
-    align-self: flex-end;
-    text-align: center;
-    position: relative;
-}
-
-.textRowIcon {
-    width: 75px;
-    height: auto;
-    transition: transform 0.1s ease-in-out;
-}
-
-.textRowIcon:hover {
-    transform: scale(1.1);
-}
-
-.textRowTitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.textRowText {
-    font-size: 1.15rem;
-    font-weight: 500;
-}
   
 .card {
     display: flex;
@@ -120,6 +57,38 @@ p {
     margin-top: 5px;
 }
 
+.textos {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* espacio entre columnas */
+}
+
+.column {
+  flex: 1; /* ambas columnas ocupan el mismo ancho */
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+
+.icon {
+    width: 75px;
+    height: auto;
+    transition: transform 0.1s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
 /* Sections */
 
 .portada{
@@ -128,7 +97,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
     padding: 20px;
 }
 
@@ -152,74 +120,6 @@ p {
         object-fit: contain;
         border-radius: 8px;
     }
-}
-
-@media (max-width: 450px) {
-    .portada {
-        flex-direction: column;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .textRowTitle {
-        font-size: 16px;
-        font-weight: 600;
-    }
-
-    .textRowText {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .portada {
-        height: 45vh;
-        flex-direction: column;
-    }
-
-    .portada img {
-        width: auto;
-        height: 40%;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-    .card {
-      width: 210px;
-      height: 220px;
-    }
-
-    .cardTitle {
-      font-size: 12px;
-    }
-
-    .cardText {
-      display: none;
-    }
-
-    .cardsRow {
-      width: 100%;
-      border-radius: 0;
-      padding: 30px 20px 50px 20px;
-    }
-
-    .textRowLeft {
-        width: 100%;
-        border-radius: 0;
-        padding: 30px 20px 50px 20px;
-    }
-    
-    .textRowRight {
-        width: 100%;
-        border-radius: 0;
-        padding: 30px 20px 50px 20px;
-    }
-}
-
-@media (max-width: 1024px) {
 
     .card {
       width: 210px;
@@ -236,10 +136,71 @@ p {
         max-width: 450px;
         font-size: 12px;
     }
-    
-    .textRowLeft .textRowRight {
-        height: 210px;
+}
+
+@media (max-width: 420px) {
+    .portada {
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .cardsRow {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        width: 80% !important;
+        flex: 1 !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .portada {
+        height: 45vh;
+        flex-direction: row;
+    }
+
+    .portada img {
+        width: auto;
+        height: 40%;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .card {
+        flex: 0 0 35%;
+        width: 210px;
+        height: 220px;
+    }
+
+    .cardTitle {
         font-size: 12px;
+    }
+
+    .cardText {
+        display: none;
+    }
+
+    .cardsRow {
+        width: 100%;
+        border-radius: 0;
+        padding: 30px 20px 50px 20px;
+    }
+
+    .textos {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -249,13 +210,8 @@ p {
       font-size: 12px;
     }
 
-    .textRowTitle {
+    .text {
         font-size: 18px;
         font-weight: 600;
-    }
-
-    .textRowText {
-        font-size: 16px;
-        font-weight: 500;
     }
 }

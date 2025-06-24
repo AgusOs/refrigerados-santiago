@@ -8,7 +8,7 @@ export const EmpresaPage = () => {
     <div className={styles.container}>
       <Slide direction="left" in={true} timeout={1000} mountOnEnter unmountOnExit>
         <div className={styles.portada}>
-          <img src="\assets\images\local.png" alt="portada1" />
+          <img src="\assets\images\local.webp" alt="portada1" />
           <img src="\assets\images\empresa-portada2.webp" alt="portada2" />
         </div>
       </Slide>

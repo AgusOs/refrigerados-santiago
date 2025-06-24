@@ -50,100 +50,47 @@ export const ComoComprarPage = () => {
           </p>
         </div>
       </div>
-      <div className={styles.textRowContainer}>
-        <div className={styles.textRowRight}>
+      <div className={styles.textos}>
+        <div className={styles.column}>
           <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono1.webp" alt="icon" className={styles.textRowIcon} />
-            <p className={styles.textRowTitle}>
+            <img src="/assets/images/icono1.webp" alt="icon" className={styles.icon} />
+            <p className={styles.text}>
               PRODUCTOS FRESCOS Y DE CALIDAD
             </p>
           </div>
           <div style={{display: "flex", alignItems: "center"}}>
-            <p className={styles.textRowTitle}>
+            <p className={styles.text}>
               OFERTAS Y PROMOCIONES
             </p>
-            <img src="/assets/images/icono2.webp" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono2.webp" alt="icon" className={styles.icon} />
           </div>
-          {/* <p className={styles.textRowText}>
-            Nuestros productos son seleccionados para ofrecerte siempre la mejor calidad.<br/>
-            Trabajamos con proveedores de confianza para que cada artículo que recibas <br/>
-            cumpla con los estándares más altos.
-          </p> */}
+          <div style={{display: "flex", alignItems: "center"}}>
+            <img src="/assets/images/icono3.webp" alt="icon" className={styles.icon} />
+            <p className={styles.text}>
+              DISTRIBUCION Y LOGISTICA
+            </p>
+          </div>
         </div>
-        {/* <div className={styles.textRowLeft}>
+        <div className={styles.column}>
           <div style={{display: "flex", alignItems: "center"}}>
-            <p className={styles.textRowTitle}>
-              OFERTAS Y PROMOCIONES
-            </p>
-            <img src="/assets/images/icono2.webp" alt="icon" className={styles.textRowIcon} />
-          </div>
-          <p className={styles.textRowText}>
-            Cada semana te traemos descuentos y beneficios especiales<br/>
-             para que aproveches los mejosres precios.
-          </p>
-        </div> */}
-        {/* <div className={styles.textRowRight}>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono3.webp" alt="icon" className={styles.textRowIcon} />
-            <p className={styles.textRowTitle}>
-              DISTRIBUCION Y LOGISTICA
-            </p>
-          </div>
-          <p className={styles.textRowText}>
-            Contamos con logistica propia y servicio de entrega.<br/>
-            Se le dan los cuidados necesarios a la mercaderia para que los productos lleguen<br/>
-            en optimas condiciones a nuestras sucursales y nuestros clientes.
-          </p>
-        </div> */}
-        <div className={styles.textRowLeft}>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono3.webp" alt="icon" className={styles.textRowIcon} />
-            <p className={styles.textRowTitle}>
-              DISTRIBUCION Y LOGISTICA
-            </p>
-          </div>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <p className={styles.textRowTitle}>
+            <p className={styles.text}>
               OPCIONES DE COMPRA FLEXIBLES
             </p>
-            <img src="/assets/images/icono4.webp" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono4.webp" alt="icon" className={styles.icon} />
           </div>
-          {/* <p className={styles.textRowText}>
-            Te ofrecemos opciones de compra flexibles, diseñadas para ajustarse a tus necesidades.<br/>
-            Nos adaptamos a la frecuencia y volumen de tus compras<br/>
-             para que siempre encuentres lo que buscas.
-          </p> */}
-        </div>
-        <div className={styles.textRowRight}>
           <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono5.webp" alt="icon" className={styles.textRowIcon} />
-            <p className={styles.textRowTitle}>
+            <img src="/assets/images/icono5.webp" alt="icon" className={styles.icon} />
+            <p className={styles.text}>
               PRECIOS COMPETITIVOS
             </p>
           </div>
           <div style={{display: "flex", alignItems: "center"}}>
-            <p className={styles.textRowTitle}>
+            <p className={styles.text}>
               OPCIONES DE PAGO
             </p>
-            <img src="/assets/images/icono6.webp" alt="icon" className={styles.textRowIcon} />
+            <img src="/assets/images/icono6.webp" alt="icon" className={styles.icon} />
           </div>
-          {/* <p className={styles.textRowText}>
-            Precios accesibles para ofrecer la mejor relacion entre costo y calidad.<br/>
-            ¡Te convienen más!
-          </p> */}
         </div>
-        {/* <div className={styles.textRowLeft}>        
-          <div style={{display: "flex", alignItems: "center"}}>
-            <p className={styles.textRowTitle}>
-              OPCIONES DE PAGO
-            </p>
-            <img src="/assets/images/icono6.webp" alt="icon" className={styles.textRowIcon} />
-          </div>
-          <p className={styles.textRowText}>
-            Ofrecemos una amplia variedad de opciones de pago<br/>
-            para que puedas elegir la que mas te convenga.
-          </p>
-        </div> */}
       </div>
     </div>
   )
