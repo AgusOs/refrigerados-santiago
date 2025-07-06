@@ -51,45 +51,41 @@ export const ComoComprarPage = () => {
         </div>
       </div>
       <div className={styles.textos}>
-        <div className={styles.column}>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono1.webp" alt="icon" className={styles.icon} />
-            <p className={styles.text}>
-              PRODUCTOS FRESCOS Y DE CALIDAD
-            </p>
-          </div>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <p className={styles.text}>
-              OFERTAS Y PROMOCIONES
-            </p>
-            <img src="/assets/images/icono2.webp" alt="icon" className={styles.icon} />
-          </div>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono3.webp" alt="icon" className={styles.icon} />
-            <p className={styles.text}>
-              DISTRIBUCION Y LOGISTICA
-            </p>
-          </div>
+        <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <img src="/assets/images/icono1.webp" alt="icon" className={styles.icon} />
+          <p className={styles.text}>
+            PRODUCTOS FRESCOS Y DE CALIDAD
+          </p>
         </div>
-        <div className={styles.column}>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <p className={styles.text}>
-              OPCIONES DE COMPRA FLEXIBLES
-            </p>
-            <img src="/assets/images/icono4.webp" alt="icon" className={styles.icon} />
-          </div>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <img src="/assets/images/icono5.webp" alt="icon" className={styles.icon} />
-            <p className={styles.text}>
-              PRECIOS COMPETITIVOS
-            </p>
-          </div>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <p className={styles.text}>
-              OPCIONES DE PAGO
-            </p>
-            <img src="/assets/images/icono6.webp" alt="icon" className={styles.icon} />
-          </div>
+        <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <p className={styles.text}>
+            OFERTAS Y PROMOCIONES
+          </p>
+          <img src="/assets/images/icono2.webp" alt="icon" className={styles.icon} />
+        </div>
+        <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <img src="/assets/images/icono3.webp" alt="icon" className={styles.icon} />
+          <p className={styles.text}>
+            DISTRIBUCION Y LOGISTICA
+          </p>
+        </div>
+        <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <p className={styles.text}>
+            OPCIONES DE COMPRA FLEXIBLES
+          </p>
+          <img src="/assets/images/icono4.webp" alt="icon" className={styles.icon} />
+        </div>
+        <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <img src="/assets/images/icono5.webp" alt="icon" className={styles.icon} />
+          <p className={styles.text}>
+            PRECIOS COMPETITIVOS
+          </p>
+        </div>
+        <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <p className={styles.text}>
+            OPCIONES DE PAGO
+          </p>
+          <img src="/assets/images/icono6.webp" alt="icon" className={styles.icon} />
         </div>
       </div>
     </div>
