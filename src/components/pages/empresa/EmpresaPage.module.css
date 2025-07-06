@@ -1,11 +1,15 @@
+/* EmpresaPage - MOBILE FIRST */
+
+/* Base styles (Mobile ≤ 480px) */
 .container {
     color: black;
 }
 
-.portada{
+.portada {
     width: 100%;
-    height: 90vh;
+    height: 45vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
@@ -13,153 +17,230 @@
 }
 
 .portada img {
-    width: 45%;
-    height: auto;
+    width: auto;
+    height: 40%;
     object-fit: contain;
     border-radius: 8px;
 }
 
 .misionvisionvalores {
-    width: 100%;
+    width: 75%;
     height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px auto;
 }
 
 .cardTexto {
     background-color: rgba(255, 255, 255);
     box-shadow: 0 0 8px rgba(0, 0, 0, 1);
     border-radius: 8px;
-    width: 25%;
+    width: 100%;
+    min-height: 200px;
     height: auto;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
-.cardTexto img {
+.cardContent {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    text-align: left;
 }
 
-.content{
-    font-size: x-large;
+.cardTitle {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700;
+    color: #017faf; /* Azul similar al de las imágenes */
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.cardText {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1.6;
+    color: #374151;
+    margin: 0 0 0.75rem 0;
+    text-align: left;
+}
+
+.cardText:last-child {
+    margin-bottom: 0;
+}
+
+.cardText strong {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.content {
     text-align: center;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
-    /* background-color: rgba(255, 255, 255);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 1); */
     border-radius: 8px;
     color: white;
     margin-bottom: 30px;
 }
 
-@media (max-width: 1024px){
+.content h4 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
 
+.content h5 {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Tablet (min-width: 481px) */
+@media (min-width: 481px) {
     .portada {
+        flex-direction: column;
         height: 45vh;
+    }
+
+    .portada img {
+        width: 55%;
+        height: auto;
+    }
+
+    .misionvisionvalores {
+        width: 85%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cardTexto {
+        min-height: 180px;
+    }
+
+    .cardTitle {
+        font-size: 1.375rem; /* 22px */
+    }
+
+    .cardText {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .content {
+        width: 85%;
+    }
+
+    .content h4 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .content h5 {
+        font-size: 1rem; /* 16px */
+    }
+}
+
+/* Desktop Pequeño (min-width: 769px) */
+@media (min-width: 769px) {
+    .portada {
+        height: 60vh;
+        padding: 30px;
         flex-direction: row;
     }
 
     .portada img {
-        width: 40%;
-        height: auto;
-        object-fit: contain;
-        border-radius: 8px;
+        width: 45%;
     }
 
     .misionvisionvalores {
-        width: 100%;
-        height: auto;
-        display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        gap: 20px;
+    }
+
+    .cardTexto {
+        width: calc(33.333% - 10px);
+        margin-bottom: 0;
+        padding: 25px;
+        min-height: 340px;
+    }
+
+    .cardTitle {
+        font-size: 1.25rem; /* 22px */
+        margin-bottom: 1.25rem;
+    }
+
+    .cardText {
+        font-size: 0.875rem; /* 14px */
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .content h4 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .content h5 {
+        font-size: 1rem; /* 16px */
+    }
+}
+
+/* Desktop Grande (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .portada {
+        height: 90vh;
+        padding: 40px;
+    }
+
+    .portada img {
+        width: 45%;
+    }
+
+    .misionvisionvalores {
+        width: 95%;
+        gap: 30px;
         justify-content: space-evenly;
     }
 
+    .cardTexto {
+        width: 25%;
+        padding: 30px;
+        min-height: 395px;
+    }
+
+    .cardTitle {
+        font-size: 1.5rem; /* 24px */
+        margin-bottom: 1.5rem;
+    }
+
+    .cardText {
+        font-size: 1rem; /* 16px */
+        margin-bottom: 1.25rem;
+    }
+
     .content {
-        font-size: small;
-        padding: 20px;
         width: 80%;
+        padding: 40px;
     }
 
-    .cardTexto {
-        background-color: rgba(255, 255, 255);
-        box-shadow: 0 0 8px rgba(0, 0, 0, 1);
-        border-radius: 8px;
-        width: 30%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .portada {
-        height: 45vh;
-        flex-direction: column;
+    .content h4 {
+        font-size: 1.5rem; /* 24px */
+        margin-bottom: 1.5rem;
     }
 
-    .portada img {
-        width: auto;
-        height: 50%;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-    .cardTexto {
-        width: 75%;
-        margin-bottom: 10px;
-    }
-
-    .misionvisionvalores {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        justify-self: center;
-        width: 75%;
-    }
-
-    .content {
-        font-size: medium;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 420px) {
-
-    .portada {
-        display: flex;
-        height: 45vh;
-        flex-direction: column !important;
-    }
-
-    .portada img {
-        width: auto;
-        height: 40%;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-    .cardTexto {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .misionvisionvalores {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        justify-self: center;
-        width: 75%;
-    }
-
-    .content {
-        font-size: medium;
-        padding: 20px;
+    .content h5 {
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.6;
     }
 }

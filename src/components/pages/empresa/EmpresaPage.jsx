@@ -14,13 +14,48 @@ export const EmpresaPage = () => {
       </Slide>
       <div className={styles.misionvisionvalores}>
         <div className={styles.cardTexto}>
-          <img src="\assets\images\mision.png" alt="mision"/>
+          <div className={styles.cardContent}>
+            <h3 className={styles.cardTitle}>MISIÓN</h3>
+            <p className={styles.cardText}>
+              Somos una empresa mayorista con 60 años de trayectoria dedicada a abastecer 
+              comercios locales, panaderías, hoteles, restaurantes y emprendedores 
+              gastronómicos en La Pampa.
+            </p>
+            <p className={styles.cardText}>
+              Nuestro propósito es fortalecer el comercio pampeano, brindando productos 
+              de calidad con un servicio confiable y una logística eficiente.
+            </p>
+          </div>
         </div>
+
         <div className={styles.cardTexto}>
-          <img src="\assets\images\vision.png" alt="vision"/>
+          <div className={styles.cardContent}>
+            <h3 className={styles.cardTitle}>VISIÓN</h3>
+            <p className={styles.cardText}>
+              Aspiramos a expandirnos en toda la provincia, asegurando que cada región 
+              de La Pampa cuente con al menos una sucursal que mantenga nuestra calidad, 
+              servicio y logística.
+            </p>
+            <p className={styles.cardText}>
+              Buscamos seguir creciendo y ampliando nuestra oferta de productos para 
+              responder a las necesidades de nuestros clientes.
+            </p>
+          </div>
         </div>
+
         <div className={styles.cardTexto}>
-          <img src="\assets\images\valores.png" alt="valores"/>
+          <div className={styles.cardContent}>
+            <h3 className={styles.cardTitle}>VALORES</h3>
+            <p className={styles.cardText}>
+              En Santiago valoramos la <strong>calidad</strong> en todo lo que hacemos, el 
+              <strong> compromiso</strong> con nuestro equipo y clientes, y la <strong>confianza </strong> 
+              que hemos construido con La Pampa.
+            </p>
+            <p className={styles.cardText}>
+              Nuestra <strong>trayectoria</strong> nos respalda, pero lo que realmente nos 
+              define es el espíritu de <strong>familia</strong>.
+            </p>
+          </div>
         </div>
       </div>
       <div className={styles.content}>

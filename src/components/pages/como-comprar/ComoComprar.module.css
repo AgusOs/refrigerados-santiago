@@ -134,7 +134,7 @@ p {
 
     .card {
         width: 100%;
-        max-width: 250px;
+        max-width: 300px;
     }
 
     .cardText {
@@ -145,9 +145,14 @@ p {
 /* Tablet (min-width: 769px) */
 @media (min-width: 769px) {
 
-    .portada{
-        flex-direction: row;
+    .portada {
         height: 80vh;
+        padding: 30px;
+        flex-direction: row;
+    }
+
+    .portada img {
+        width: 45%;
     }
 
     .cardsRow {
@@ -160,7 +165,7 @@ p {
 
     .card {
         width: 100%;
-        max-width: none;
+        max-width: 300px;
         min-height: clamp(180px, 25vw, 220px);
     }
 
@@ -202,6 +207,7 @@ p {
 
     .card {
         min-height: clamp(250px, 30vw, 290px);
+        max-width: none;
     }
 
     .cardTitle {
