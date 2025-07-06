@@ -1,3 +1,6 @@
+/* OfertasPage - MOBILE FIRST */
+
+/* Base styles (Mobile ≤ 480px) */
 p {
     margin: 0;
     margin-bottom: 10px;
@@ -13,7 +16,7 @@ p {
 /* Swiper banner ppal */
 .swiper {
     width: 100%;
-    height: 90vh;
+    height: 45vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +28,12 @@ p {
     width: auto;
     justify-content: center;
 }
-    
-.portada{
+
+.portada {
     width: auto;
-    height: 90vh;
+    height: 45vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
@@ -38,119 +42,105 @@ p {
 }
 
 .portada img {
-    width: 45%;
+    width: auto;
+    height: 40%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.ledesma {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40%;
+    width: auto;
+}
+
+.ledesma img {
+    width: 50%;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
 }
 
-.ledesma{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 50%;
-}
-
-@media (max-width: 1024px) {
-
-    .swiper{
-        height: 85vh;
+/* Tablet (min-width: 481px) */
+@media (min-width: 481px) {
+    .swiper {
+        height: 60vh;
     }
-    
+
     .portada {
-        height: 85vh;
+        height: 60vh;
         flex-direction: column;
+        gap: 15px;
     }
 
     .portada img {
-        width: 60%;
-        height: auto;
-        object-fit: contain;
-        border-radius: 8px;
+        height: 45%;
+        width: auto;
     }
 
     .ledesma {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        height: 40%;
-        width: auto;
+        height: auto;
+        width: 80%;
     }
 
     .ledesma img {
-        width: 40%;
+        width: 50%;
         height: auto;
-        object-fit: contain;
-        border-radius: 8px;
     }
 }
 
-@media (max-width: 768px) {
+/* Desktop Pequeño (min-width: 769px) */
+@media (min-width: 769px) {
+    .swiper {
+        height: 75vh;
+    }
 
     .portada {
-        display: flex;
-        height: 45vh;
-        flex-direction: column !important;
+        height: 80vh;
+        flex-direction: row;
+        gap: 20px;
+        padding: 25px;
     }
 
     .portada img {
-        width: auto;
-        height: 45%;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-    .swiper {
-        height: 45vh;
-    }
-
-    .ledesma {
-        flex-direction: row;
-        align-items: center;
-        height: 40%;
-        width: auto;
-    }
-
-    .ledesma img {
-        width: 35%;
+        width: 50%;
         height: auto;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-}
-
-@media (max-width: 420px) {
-
-    .portada {
-        display: flex;
-        height: 45vh;
-        flex-direction: column !important;
-    }
-
-    .portada img {
-        width: auto;
-        height: 40%;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-    .swiper {
-        height: 45vh;
     }
 
     .ledesma {
-        flex-direction: row;
-        align-items: center;
-        height: 40%;
-        width: auto;
+        width: 45%;
     }
 
     .ledesma img {
         width: 55%;
         height: auto;
-        object-fit: contain;
-        border-radius: 8px;
+    }
+}
+
+/* Desktop Grande (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .swiper {
+        height: 90vh;
     }
 
+    .portada {
+        height: 90vh;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .portada img {
+        width: 45%;
+        height: auto;
+    }
+
+    .ledesma {
+        width: 55%;
+    }
 }
