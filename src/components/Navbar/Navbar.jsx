@@ -110,7 +110,7 @@ function Navbar(props) {
                 <InstagramIcon sx={{ color: "#ffffff", backgroundColor: '#61a5c2', borderRadius: '50%', padding: '6px', fontSize: 34 }} />
               </a>
             </div>
-            <Box sx={{ display: { xs: 'none', sm: 'block' }, position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+            <Box sx={{ display: { xs: 'none', sm: 'block' }, position: 'absolute', left: '50%', transform: 'translateX(-50%)', textWrap: 'nowrap' }}>
               {navItems.map((item, index) => (
                 <Button key={index} sx={{ color: '#fff' }} onClick={handleNavigate(item.path)}>
                   <b>{item.name}</b>
