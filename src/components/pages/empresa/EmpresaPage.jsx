@@ -69,17 +69,17 @@ export const EmpresaPage = () => {
       <div className={styles.imagenes}>
         <img src="\assets\galeria\1.JPG" alt="empresa1" />
         <img src="\assets\galeria\2.JPG" alt="empresa2" />
+        <img src="\assets\galeria\13.jpeg" alt="empresa13" />
+        <img src="\assets\galeria\11.jpeg" alt="empresa11" />
+        <img src="\assets\galeria\9.jpeg" alt="empresa9" />
         <img src="\assets\galeria\3.jpeg" alt="empresa3" />
         <img src="\assets\galeria\4.jpeg" alt="empresa4" />
-        <img src="\assets\galeria\5.jpeg" alt="empresa5" />
         <img src="\assets\galeria\6.jpeg" alt="empresa6" />
+        <img src="\assets\galeria\5.jpeg" alt="empresa5" />
         <img src="\assets\galeria\7.jpeg" alt="empresa7" />
         <img src="\assets\galeria\8.jpeg" alt="empresa8" />
-        <img src="\assets\galeria\9.jpeg" alt="empresa9" />
         <img src="\assets\galeria\10.jpeg" alt="empresa10" />
-        <img src="\assets\galeria\11.jpeg" alt="empresa11" />
         <img src="\assets\galeria\12.jpeg" alt="empresa12" />
-        <img src="\assets\galeria\13.jpeg" alt="empresa13" />
         <img src="\assets\galeria\14.jpeg" alt="empresa14" />
       </div>
     </div>
