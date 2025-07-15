@@ -10,7 +10,7 @@ import style from './Carousel.module.css';
 import { useMediaQuery } from '@mui/material';
 
 export const Carousel = () => {
-  const isDesktop = useMediaQuery('(min-width: 801px)');
+  const isDesktop = useMediaQuery('(min-width: 769px)');
 
   const config = {
     ...carouselConfig,
@@ -23,13 +23,13 @@ export const Carousel = () => {
     <Swiper {...config} className={style.swiper}>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>LECHE LA SUIPACHENSE</p>
+          <p>MORTADELA PALADINI x Kg</p>
         </div>
         <img src="/assets/ofertas/1.png" alt="oferta1" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>DULCE DE LECHE MILKAUT 400gr</p>
+          <p>YERBA AMANDA 500gr</p>
         </div>
         <img src="/assets/ofertas/2.png" alt="oferta2" />
       </SwiperSlide>
@@ -41,21 +41,27 @@ export const Carousel = () => {
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>TORTILLAS TIA ROSA x10u</p>
+          <p>LECHE LARGA VIDA FRANSAFE</p>
         </div>
         <img src="/assets/ofertas/4.png" alt="oferta4" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>AZÚCAR LEDESMA 1Kg</p>
+          <p>TOMATE TRITURADO DULCOR</p>
         </div>
-        <img src="/assets/ofertas/5.webp" alt="oferta5" />
+        <img src="/assets/ofertas/5.png" alt="oferta6" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>QUESO UNTABLE RICREM CLÁSICO</p>
+          <p>HARINA TASSARA</p>
         </div>
         <img src="/assets/ofertas/6.png" alt="oferta6" />
+      </SwiperSlide>
+      <SwiperSlide className={style.swiperSlide}>
+        <div className={style.title}>
+          <p>AZÚCAR LEDESMA 1Kg</p>
+        </div>
+        <img src="/assets/ofertas/7.webp" alt="oferta7" />
       </SwiperSlide>
       {isDesktop && (
         <>
