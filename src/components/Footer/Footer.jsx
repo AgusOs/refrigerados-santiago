@@ -16,8 +16,8 @@ export const Footer = () => {
               <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="/ofertas" rel="noopener noreferrer">
                 Ofertas
               </a>
-              <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="/como-comprar" rel="noopener noreferrer">
-                Como comprar
+              <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="/clientes" rel="noopener noreferrer">
+                Nuestros clientes
               </a>
               <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="/empresa" rel="noopener noreferrer">
                 Sobre nosotros

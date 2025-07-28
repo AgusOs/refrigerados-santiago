@@ -29,8 +29,8 @@ const navItems = [
     path: '/'
   },
   {
-    name: 'Como comprar',
-    path: '/como-comprar'
+    name: 'Nuestros clientes',
+    path: '/clientes'
   },
   {
     name: 'La empresa',

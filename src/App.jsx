@@ -12,7 +12,7 @@ function App () {
                 <Route path='/' element={
                     <OfertasPage/>
                 }></Route>
-                <Route path='/como-comprar' element={
+                <Route path='/clientes' element={
                     <ComoComprarPage/>
                 }></Route>
                 <Route path='/empresa' element={

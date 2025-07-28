@@ -66,38 +66,6 @@ p {
     -webkit-box-orient: vertical;
 }
 
-.textos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    box-sizing: border-box;
-    align-items: center;
-    text-align: center;
-}
-
-.icon {
-    width: 75px;
-    height: auto;
-    transition: transform 0.1s ease-in-out;
-}
-
-.icon:hover {
-    transform: scale(1.1);
-}
-
-.text {
-    font-size: 16px;
-    font-weight: 600;
-    color: whitesmoke;
-}
-
 /* Sections */
 .portada {
     width: 100%;
@@ -120,10 +88,6 @@ p {
 @media (min-width: 481px) {
     p {
         font-size: 16px;
-    }
-
-    .text {
-        font-size: 18px;
     }
 
     .cardsRow {
@@ -176,10 +140,6 @@ p {
     .cardImage {
         width: clamp(75px, 12vw, 105px);
     }
-
-    .textos {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 /* Desktop (min-width: 1025px) */
@@ -191,10 +151,11 @@ p {
     .portada {
         height: 90vh;
         flex-direction: row;
+        justify-content: space-evenly;
     }
 
     .portada img {
-        width: 50%;
+        width: 35%;
         height: auto;
     }
 
@@ -225,10 +186,6 @@ p {
         width: clamp(90px, 15vw, 120px);
         margin-bottom: clamp(12px, 3vw, 20px);
     }
-
-    .textos {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 /* Large Desktop (min-width: 1200px) */
@@ -245,4 +202,197 @@ p {
     .cardTitle {
         font-size: clamp(14px, 1.8vw, 18px);
     }
+}
+
+/* clientes row */
+
+/* Cada fila individual - MÓVIL */
+.clientesRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  margin: 0 0.5rem;
+}
+
+/* Imagen de cada fila - MÓVIL */
+.rowImg {
+  width: 100%;
+  max-width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Contenedor del texto - MÓVIL */
+.textos {
+  width: 100%;
+}
+
+.textos h3 {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.textos p {
+  color: whitesmoke;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.textos p strong {
+  color: whitesmoke;
+}
+
+.textos ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.textos ul li {
+  position: relative;
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  color: whitesmoke;
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+.textos ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.textos .cierre {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #e74c3c;
+}
+
+/* TABLET - min-width: 768px */
+@media (min-width: 768px) {
+
+  .clientesRow {
+    flex-direction: row;
+    text-align: left;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 0;
+    border-radius: 16px;
+  }
+
+  .rowImg {
+    width: 280px;
+    height: 200px;
+    max-width: none;
+    flex-shrink: 0;
+  }
+
+  .textos {
+    flex: 1;
+    padding: 0.5rem;
+  }
+
+  .textos h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .textos p {
+    font-size: 1rem;
+  }
+
+  .textos ul li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .textos .cierre {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+
+  .clientesRow:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+}
+
+/* DESKTOP - min-width: 1024px */
+@media (min-width: 1024px) {
+
+  .clientesRow {
+    gap: 2.5rem;
+    padding: 2.5rem;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .rowImg {
+    width: 320px;
+    height: 220px;
+  }
+
+  .textos {
+    padding: 1rem;
+  }
+
+  .textos h3 {
+    font-size: 1.6rem;
+  }
+
+  .textos p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .textos ul li {
+    padding: 0.6rem 0 0.6rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .textos ul li::before {
+    font-size: 1.1rem;
+  }
+
+  .textos .cierre {
+    font-size: 1.2rem;
+  }
+}
+
+/* DESKTOP GRANDE - min-width: 1440px */
+@media (min-width: 1440px) {
+
+  .clientesRow {
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  .rowImg {
+    width: 380px;
+    height: 260px;
+  }
+
+  .textos h3 {
+    font-size: 1.8rem;
+  }
+
+  .textos p {
+    font-size: 1.2rem;
+  }
+
+  .textos ul li {
+    font-size: 1.1rem;
+  }
 }
