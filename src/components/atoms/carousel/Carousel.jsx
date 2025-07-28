@@ -23,7 +23,7 @@ export const Carousel = () => {
     <Swiper {...config} className={style.swiper}>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>JABON PARA ROPA HEROE 800ml</p>
+          <p>SUAVIZANTE HEROE 900ml</p>
         </div>
         <img src="/assets/ofertas/1.png" alt="oferta1" />
       </SwiperSlide>
@@ -35,21 +35,27 @@ export const Carousel = () => {
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>LECHE LARGA VIDA FRANSAFE</p>
+          <p>MAYONESA HELLMANN'S x500gr</p>
         </div>
         <img src="/assets/ofertas/3.png" alt="oferta3" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>FIAMBRE DE POLLO DON ALEJANDRO</p>
+          <p>MORTADELA PALADINI x Kg</p>
         </div>
         <img src="/assets/ofertas/4.png" alt="oferta4" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
-          <p>QUESO UNTABLE MILKAUAT 285gr</p>
+          <p>TAPAS DE EMPANADAS TAPA MANIA</p>
         </div>
         <img src="/assets/ofertas/5.png" alt="oferta5" />
+      </SwiperSlide>
+      <SwiperSlide className={style.swiperSlide}>
+        <div className={style.title}>
+          <p>VINO VIÑAS DE BALBO</p>
+        </div>
+        <img src="/assets/ofertas/6.png" alt="oferta5" />
       </SwiperSlide>
       <SwiperSlide className={style.swiperSlide}>
         <div className={style.title}>
