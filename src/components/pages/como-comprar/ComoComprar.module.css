@@ -84,7 +84,7 @@ p {
     border-radius: 8px;
 }
 
-/* Small Mobile (min-width: 481px) - Large Mobile/Small Tablet */
+/* Mobile (min-width: 481px) - Large Mobile/Small Tablet */
 @media (min-width: 481px) {
     p {
         font-size: 16px;
