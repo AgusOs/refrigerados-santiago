@@ -92,7 +92,7 @@ export const ComoComprarPage = () => {
             <li>Medios de pago variados para tu comodidad.</li>
           </ul>
 
-          <p class="cierre"><strong>¡Te esperamos!</strong></p>
+          <p className={styles.cierre}><strong>¡Te esperamos!</strong></p>
         </div>
       </motion.div>
       <motion.div 
@@ -109,7 +109,7 @@ export const ComoComprarPage = () => {
         <img src="/assets/clientes/profesional-gastronomico.png" alt="img"  className={styles.rowImg}/>
         <div className={styles.textos}>
           <h3>PROFESIONALES GASTRONÓMICOS:</h3>
-          <p><strong>Pensado para tu cocina profesional</strong>. Si sos chef, tenés un local o emprendés en gastronomía, en Santiago encontrás todo lo que necesitás para tu día a día:</p>
+          <p><strong>Pensado para tu cocina profesional</strong>. Si sos chef, tenés un local o emprendés en gastronomía, <br></br> en Santiago encontrás todo lo que necesitás para tu día a día:</p>
 
           <ul>
             <li>Productos en formatos grandes y precios mayoristas.</li>
@@ -120,7 +120,7 @@ export const ComoComprarPage = () => {
             <li>Distribución</li>
           </ul>
 
-          <p class="cierre"><strong>Comprá más, gastá menos y trabajá mejor.</strong></p>
+          <p className={styles.cierre}><strong>Comprá más, gastá menos y trabajá mejor.</strong></p>
         </div>
       </motion.div>
       <motion.div 
@@ -149,7 +149,7 @@ export const ComoComprarPage = () => {
             <li>Contactate para conocer los beneficios</li>
           </ul>
 
-          <p><strong>Abastecé tu comercio con confianza y al mejor precio.</strong></p>
+          <p className={styles.cierre}><strong>Abastecé tu comercio con confianza y al mejor precio.</strong></p>
         </div>
       </motion.div>
       <motion.div 
@@ -177,7 +177,7 @@ export const ComoComprarPage = () => {
             <li>Compromiso con el cumplimiento en tiempo y forma.</li>
           </ul>
 
-          <p><strong>Contá con Santiago para acompañar tu trabajo todos los días.</strong></p>
+          <p className={styles.cierre}><strong>Contá con Santiago para acompañar tu trabajo todos los días.</strong></p>
         </div>
       </motion.div>
     </div>
