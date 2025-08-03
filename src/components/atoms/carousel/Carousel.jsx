@@ -18,51 +18,29 @@ export const Carousel = () => {
     navigation: isDesktop? {nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'} : false,
     
   };
+
+  const ofertas = [
+    { path: '/assets/ofertas/1.png', title: 'TAPAS DE EMPANADAS TAPA MANIA'},
+    { path: '/assets/ofertas/2.png', title: 'LAVANDINA HEROE x1 Lt'},
+    { path: '/assets/ofertas/3.png', title: 'PURE DE TOMATES DOÑA PEPA'},
+    { path: '/assets/ofertas/4.png', title: 'FIDEOS CELENTANO MAROLIO'},
+    { path: '/assets/ofertas/5.png', title: 'TALLARINES MAROLIO'},
+    { path: '/assets/ofertas/6.png', title: 'BONDIOLA DON ALEJANDRO x Kg'},
+    { path: '/assets/ofertas/8.png', title: 'MORTADELA PALADINI x Kg'},
+    { path: '/assets/ofertas/9.png', title: 'SALCHICHAS FELA x 6u'},
+    { path: '/assets/ofertas/7.webp', title: 'AZÚCAR LEDESMA 1Kg'},
+  ];
   
   return (
     <Swiper {...config} className={style.swiper}>
-      <SwiperSlide className={style.swiperSlide}>
+      {ofertas.map((oferta, index) => (
+      <SwiperSlide key={index} className={style.swiperSlide}>
         <div className={style.title}>
-          <p>SUAVIZANTE HEROE 900ml</p>
+          <p>{oferta.title}</p>
         </div>
-        <img src="/assets/ofertas/1.png" alt="oferta1" />
+        <img src={oferta.path} alt={`oferta${index + 1}`} />
       </SwiperSlide>
-      <SwiperSlide className={style.swiperSlide}>
-        <div className={style.title}>
-          <p>YOGURT BEBIBLE MILKAUT</p>
-        </div>
-        <img src="/assets/ofertas/2.png" alt="oferta2" />
-      </SwiperSlide>
-      <SwiperSlide className={style.swiperSlide}>
-        <div className={style.title}>
-          <p>MAYONESA HELLMANN'S x500gr</p>
-        </div>
-        <img src="/assets/ofertas/3.png" alt="oferta3" />
-      </SwiperSlide>
-      <SwiperSlide className={style.swiperSlide}>
-        <div className={style.title}>
-          <p>MORTADELA PALADINI x Kg</p>
-        </div>
-        <img src="/assets/ofertas/4.png" alt="oferta4" />
-      </SwiperSlide>
-      <SwiperSlide className={style.swiperSlide}>
-        <div className={style.title}>
-          <p>TAPAS DE EMPANADAS TAPA MANIA</p>
-        </div>
-        <img src="/assets/ofertas/5.png" alt="oferta5" />
-      </SwiperSlide>
-      <SwiperSlide className={style.swiperSlide}>
-        <div className={style.title}>
-          <p>VINO VIÑAS DE BALBO</p>
-        </div>
-        <img src="/assets/ofertas/6.png" alt="oferta5" />
-      </SwiperSlide>
-      <SwiperSlide className={style.swiperSlide}>
-        <div className={style.title}>
-          <p>AZÚCAR LEDESMA 1Kg</p>
-        </div>
-        <img src="/assets/ofertas/7.webp" alt="oferta7" />
-      </SwiperSlide>
+      ))};
       {isDesktop && (
         <>
           <div className="swiper-button-prev"></div>
