@@ -17,10 +17,6 @@ export const Card = ({ image, onClick, index }) => {
                 delay: index * 0.1,
                 ease: "easeOut" 
             }}
-            whileHover={{ 
-                scale: 1.05,
-                transition: { duration: 0.2 }
-            }}
             whileTap={{ scale: 0.95 }}
         >
             <motion.img 
@@ -32,7 +28,7 @@ export const Card = ({ image, onClick, index }) => {
                 className="overlayContainer"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.2 }}
             >
                 <div className="overlayBg"></div>
                 <motion.div 

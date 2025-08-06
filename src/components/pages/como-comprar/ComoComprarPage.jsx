@@ -109,7 +109,7 @@ export const ComoComprarPage = () => {
         <img src="/assets/clientes/profesional-gastronomico.png" alt="img"  className={styles.rowImg}/>
         <div className={styles.textos}>
           <h3>PROFESIONALES GASTRONÓMICOS:</h3>
-          <p><strong>Pensado para tu cocina profesional</strong>. Si sos chef, tenés un local o emprendés en gastronomía, <br></br> en Santiago encontrás todo lo que necesitás para tu día a día:</p>
+          <p><strong>Pensado para tu cocina profesional</strong>. Si sos chef, tenés un local o emprendés en gastronomía, en Santiago encontrás todo lo que necesitás para tu día a día:</p>
 
           <ul>
             <li>Productos en formatos grandes y precios mayoristas.</li>

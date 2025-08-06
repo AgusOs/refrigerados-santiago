@@ -1,0 +1,764 @@
+/* =================================
+   HOJA DE ESTILOS RESPONSIVE
+   Animación Camión - Mobile First
+   ================================= */
+
+/* BASE STYLES - Mobile (< 480px) */
+.truck-container {
+  width: 100%;;
+  padding: 1rem;
+}
+
+.truck-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.truck-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  line-height: 1.3;
+}
+
+.truck-canvas {
+  width: 100%;
+  height: 200px;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.truck-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.truck-vehicle {
+  position: absolute;
+  width: 2rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transform-origin: center center;
+}
+
+.truck-vehicle-icon {
+  font-size: 1.5rem;
+}
+
+.truck-dust {
+  position: absolute;
+  z-index: 10;
+}
+
+.truck-dust-particle {
+  position: absolute;
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: #9ca3af;
+  border-radius: 50%;
+}
+
+.truck-checkpoint {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #10b981;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.truck-progress-indicator {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  z-index: 30;
+  min-width: 80px;
+}
+
+.truck-progress-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.truck-progress-bar {
+  width: 60px;
+  height: 0.375rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+}
+
+.truck-progress-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+  transition: all 0.2s;
+}
+
+.truck-progress-text {
+  font-size: 0.625rem;
+  color: #6b7280;
+  margin-top: 0.125rem;
+}
+
+.truck-controls {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.truck-slider-container {
+  margin-bottom: 1rem;
+}
+
+.truck-slider-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.truck-slider {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.5rem;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.truck-slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.truck-slider::-moz-range-thumb {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.truck-slider-markers {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.625rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.truck-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.truck-button {
+  background-color: #6b7280;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.truck-button:hover {
+  background-color: #4b5563;
+}
+
+.truck-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.truck-button-primary {
+  background-color: #3b82f6;
+}
+
+.truck-button-primary:hover {
+  background-color: #2563eb;
+}
+
+.truck-button-green {
+  background-color: #10b981;
+}
+
+.truck-button-green:hover {
+  background-color: #059669;
+}
+
+.truck-quick-jumps {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.truck-quick-jumps-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.truck-quick-buttons {
+  display: flex;
+  gap: 0.375rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.truck-quick-button {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.truck-quick-button-active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.truck-quick-button-inactive {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.truck-quick-button-inactive:hover {
+  background-color: #e5e7eb;
+}
+
+/* SMALL MOBILE - 480px */
+@media (min-width: 480px) {
+  .truck-container {
+    padding: 1.5rem;
+  }
+
+  .truck-title {
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .truck-canvas {
+    height: 240px;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .truck-vehicle {
+    width: 2.5rem;
+    height: 2rem;
+  }
+
+  .truck-vehicle-icon {
+    font-size: 2rem;
+  }
+
+  .truck-dust-particle {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .truck-checkpoint {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .truck-progress-indicator {
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.75rem;
+    min-width: 100px;
+  }
+
+  .truck-progress-bar {
+    width: 80px;
+    height: 0.5rem;
+  }
+
+  .truck-controls {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .truck-slider {
+    height: 0.75rem;
+  }
+
+  .truck-slider::-webkit-slider-thumb {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  .truck-slider::-moz-range-thumb {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  .truck-buttons {
+    gap: 0.75rem;
+  }
+
+  .truck-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* TABLET - 768px */
+@media (min-width: 768px) {
+  .truck-wrapper {
+    max-width: 48rem;
+  }
+
+  .truck-title {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .truck-canvas {
+    height: 300px;
+    border-radius: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .truck-vehicle {
+    width: 3rem;
+    height: 2rem;
+  }
+
+  .truck-vehicle-icon {
+    font-size: 2.5rem;
+  }
+
+  .truck-dust-particle {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .truck-checkpoint {
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid white;
+  }
+
+  .truck-progress-indicator {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.75rem;
+    min-width: 120px;
+  }
+
+  .truck-progress-title {
+    font-size: 0.875rem;
+  }
+
+  .truck-progress-bar {
+    width: 100px;
+    height: 0.5rem;
+  }
+
+  .truck-progress-text {
+    font-size: 0.75rem;
+  }
+
+  .truck-controls {
+    padding: 1.5rem;
+  }
+
+  .truck-slider-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .truck-slider-label {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .truck-slider {
+    height: 0.75rem;
+  }
+
+  .truck-slider::-webkit-slider-thumb {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .truck-slider::-moz-range-thumb {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .truck-buttons {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .truck-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .truck-quick-jumps {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .truck-quick-jumps-title {
+    font-size: 0.875rem;
+  }
+
+  .truck-quick-buttons {
+    gap: 0.5rem;
+  }
+
+  .truck-quick-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* DESKTOP - 1024px */
+@media (min-width: 1024px) {
+  .truck-container {
+    padding: 2rem 1rem;
+  }
+
+  .truck-wrapper {
+    max-width: 64rem;
+  }
+
+  .truck-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .truck-canvas {
+    height: 320px;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .truck-canvas:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .truck-vehicle {
+    width: 3rem;
+    height: 2.5rem;
+  }
+
+  .truck-vehicle-icon {
+    font-size: 3rem;
+  }
+
+  .truck-dust-particle {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .truck-checkpoint {
+    width: 0.875rem;
+    height: 0.875rem;
+    border: 2px solid white;
+  }
+
+  .truck-progress-indicator {
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    min-width: 140px;
+    border-radius: 0.75rem;
+  }
+
+  .truck-progress-title {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .truck-progress-bar {
+    width: 120px;
+    height: 0.5rem;
+  }
+
+  .truck-controls {
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .truck-slider-container {
+    margin-bottom: 2rem;
+  }
+
+  .truck-slider-label {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .truck-slider {
+    height: 1rem;
+  }
+
+  .truck-slider::-webkit-slider-thumb {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  .truck-slider::-moz-range-thumb {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  .truck-buttons {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .truck-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .truck-quick-jumps {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .truck-quick-jumps-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .truck-quick-buttons {
+    gap: 0.5rem;
+  }
+
+  .truck-quick-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* LARGE DESKTOP - 1440px+ */
+@media (min-width: 1440px) {
+  .truck-container {
+    padding: 3rem 1rem;
+  }
+
+  .truck-wrapper {
+    max-width: 80rem;
+  }
+
+  .truck-title {
+    font-size: 3.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .truck-canvas {
+    height: 400px;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .truck-vehicle {
+    width: 4rem;
+    height: 3rem;
+  }
+
+  .truck-vehicle-icon {
+    font-size: 3.5rem;
+  }
+
+  .truck-dust-particle {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+
+  .truck-checkpoint {
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid white;
+  }
+
+  .truck-progress-indicator {
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 1.25rem;
+    min-width: 160px;
+    border-radius: 1rem;
+  }
+
+  .truck-progress-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .truck-progress-bar {
+    width: 140px;
+    height: 0.625rem;
+  }
+
+  .truck-progress-text {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;  
+  }
+
+  .truck-controls {
+    padding: 2.5rem;
+    border-radius: 2rem;
+  }
+
+  .truck-slider-container {
+    margin-bottom: 2.5rem;
+  }
+
+  .truck-slider-label {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .truck-slider {
+    height: 1.25rem;
+  }
+
+  .truck-slider::-webkit-slider-thumb {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .truck-slider::-moz-range-thumb {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .truck-slider-markers {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .truck-buttons {
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .truck-button {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 0.875rem;
+  }
+
+  .truck-quick-jumps {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+
+  .truck-quick-jumps-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .truck-quick-buttons {
+    gap: 0.75rem;
+  }
+
+  .truck-quick-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.625rem;
+  }
+}
+
+/* UTILIDADES ADICIONALES */
+.truck-fade-in {
+  animation: truckFadeIn 0.5s ease-out;
+}
+
+@keyframes truckFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.truck-bounce {
+  animation: truckBounce 0.6s ease-out;
+}
+
+@keyframes truckBounce {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ESTADOS DE HOVER PARA DESKTOP */
+@media (min-width: 1024px) {
+  .truck-button {
+    transition: all 0.3s ease;
+  }
+
+  .truck-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .truck-quick-button:hover {
+    transform: translateY(-1px);
+  }
+
+  .truck-slider:hover {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+}
