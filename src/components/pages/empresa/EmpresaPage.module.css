@@ -232,6 +232,7 @@
     .content {
         width: 80%;
         padding: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .content h4 {

@@ -20,7 +20,7 @@ const Camion = () => {
   // Convertir progreso de 0-100 a 0-1
   const normalizedProgress = useTransform(progressValue, [0, 100], [0, 1]);
 
-  // Checkpoints del recorrido
+  // Checkpoints del recorrido donde para el camion
   const checkpoints = [0, 26.5, 53.4, 80, 100];
 
   // Obtener checkpoint actual
@@ -78,20 +78,14 @@ const Camion = () => {
 
   // Función para calcular puntos sobre la carretera recta
   const calculatePointOnRoad = (t) => {
-    // Carretera recta horizontal desde x=50 hasta x=1150 (ocupando más ancho)
-    // Y centrada en y=240 (75% de 320)
-    const startX = 50;   // Más cerca del borde izquierdo
-    const endX = 1150;   // Más cerca del borde derecho
+    // Carretera centrada en el viewBox
+    const startX = 100;   // Margen del 8.3% a la izquierda
+    const endX = 1200;    // Margen del 8.3% a la derecha
     const y = 240;
     
     const x = startX + (endX - startX) * t;
     // Convertir a porcentajes para posicionamiento del camión
     return { x: (x / 1200) * 100, y: (y / 320) * 100 };
-  };
-
-  // Calcular rotación del camión (siempre 0 grados para carretera recta)
-  const calculateTruckRotation = (t) => {
-    return 0; // Siempre horizontal en carretera recta
   };
 
   // Posición del camión siguiendo la carretera recta
@@ -104,42 +98,6 @@ const Camion = () => {
     normalizedProgress,
     (t) => `${calculatePointOnRoad(t).y}%`
   );
-
-  // Rotación del camión (siempre 0 para carretera recta)
-  const truckRotation = useTransform(
-    normalizedProgress,
-    (t) => calculateTruckRotation(t)
-  );
-
-  // Generar path de la carretera recta ocupando más ancho
-  const generateRoadPath = () => {
-    return `M 50 240 L 1150 240`;
-  };
-
-  // Función para animar automáticamente
-  const autoAnimate = () => {
-    const duration = 4000; // 4 segundos
-    const startTime = Date.now();
-    const startProgress = progress;
-    
-    const animate = () => {
-      const elapsed = Date.now() - startTime;
-      const progressRatio = Math.min(elapsed / duration, 1);
-      const newProgress = startProgress + (100 - startProgress) * progressRatio;
-      
-      setProgress(newProgress);
-      
-      if (progressRatio < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-    
-    requestAnimationFrame(animate);
-  };
-
-  const resetAnimation = () => {
-    setProgress(0);
-  };
 
   return (
     <div className="truck-container">
@@ -165,7 +123,8 @@ const Camion = () => {
                     width: '100%',
                     height: '100%',
                     left: '0',
-                    top: '0'
+                    top: '0',
+                    transform: 'translateX(0%)'
                   }}
                   viewBox="0 0 1200 320"
                   preserveAspectRatio="xMidYMid meet"
@@ -177,20 +136,20 @@ const Camion = () => {
                     </linearGradient>
                   </defs>
                   
-                  {/* Carretera base recta - ocupando más ancho */}
+                  {/* Carretera base recta - centrada */}
                   <line
-                    x1="50" y1="240" 
-                    x2="1150" y2="240"
+                    x1="0" y1="240" 
+                    x2="1700" y2="240"
                     stroke="#6b7280"
                     strokeWidth="50"
                     strokeLinecap="round"
                     opacity="0.8"
                   />
 
-                  {/* Línea blanca central */}
+                  {/* Línea blanca central - centrada */}
                   <line
-                    x1="50" y1="240" 
-                    x2="1150" y2="240"
+                    x1="0" y1="240" 
+                    x2="1700" y2="240"
                     stroke="white"
                     strokeWidth="6"
                     strokeLinecap="round"
@@ -201,10 +160,10 @@ const Camion = () => {
                   />
 
                   {/* Checkpoints en la carretera recta */}
-                  {[0, 0.264, 0.533, 0.79, 1].map((t, index) => {
+                  {[0, 0.265, 0.534, 0.8, 1].map((t, index) => {
                     const point = calculatePointOnRoad(t);
                     const checkpointProgress = t * 100;
-                    const x = 50 + (1100 * t); // Calculado con el nuevo rango
+                    const x = 120 + (960 * t); // 80% del ancho: startX=120, rango=960
                     const isActive = progress >= checkpointProgress;
                     const checkpointText = checkpointTexts[index];
                     
