@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useTransform } from 'motion/react';
 import './Camion.css';
@@ -77,10 +78,10 @@ const Camion = () => {
 
   // Función para calcular puntos sobre la carretera recta
   const calculatePointOnRoad = (t) => {
-    // Carretera recta horizontal desde x=100 hasta x=1100 (en coordenadas SVG)
+    // Carretera recta horizontal desde x=50 hasta x=1150 (ocupando más ancho)
     // Y centrada en y=240 (75% de 320)
-    const startX = 100;
-    const endX = 1100;
+    const startX = 50;   // Más cerca del borde izquierdo
+    const endX = 1150;   // Más cerca del borde derecho
     const y = 240;
     
     const x = startX + (endX - startX) * t;
@@ -110,9 +111,9 @@ const Camion = () => {
     (t) => calculateTruckRotation(t)
   );
 
-  // Generar path de la carretera recta con coordenadas absolutas
+  // Generar path de la carretera recta ocupando más ancho
   const generateRoadPath = () => {
-    return `M 100 240 L 1100 240`;
+    return `M 50 240 L 1150 240`;
   };
 
   // Función para animar automáticamente
@@ -157,22 +158,18 @@ const Camion = () => {
                   zIndex: 1
                 }}
               >
-                {/* SVG de la carretera recta con fondo de prueba */}
+                {/* SVG de la carretera recta ocupando todo el ancho */}
                 <svg 
                   style={{ 
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
                     left: '0',
-                    top: '0',
-                    border: '2px solid red' // Para debuggear
+                    top: '0'
                   }}
                   viewBox="0 0 1200 320"
                   preserveAspectRatio="xMidYMid meet"
                 >
-                  {/* Fondo de prueba */}
-                  <rect x="0" y="0" width="1200" height="320" fill="#f0f9ff" opacity="0.5" />
-                  
                   <defs>
                     <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" stopColor="#e5e7eb" />
@@ -180,10 +177,10 @@ const Camion = () => {
                     </linearGradient>
                   </defs>
                   
-                  {/* Carretera base recta - SIMPLIFICADA */}
+                  {/* Carretera base recta - ocupando más ancho */}
                   <line
-                    x1="100" y1="240" 
-                    x2="1100" y2="240"
+                    x1="50" y1="240" 
+                    x2="1150" y2="240"
                     stroke="#6b7280"
                     strokeWidth="50"
                     strokeLinecap="round"
@@ -192,8 +189,8 @@ const Camion = () => {
 
                   {/* Línea blanca central */}
                   <line
-                    x1="100" y1="240" 
-                    x2="1100" y2="240"
+                    x1="50" y1="240" 
+                    x2="1150" y2="240"
                     stroke="white"
                     strokeWidth="6"
                     strokeLinecap="round"
@@ -204,10 +201,10 @@ const Camion = () => {
                   />
 
                   {/* Checkpoints en la carretera recta */}
-                  {[0, 0.265, 0.534, 0.8, 1].map((t, index) => {
+                  {[0, 0.264, 0.533, 0.79, 1].map((t, index) => {
                     const point = calculatePointOnRoad(t);
                     const checkpointProgress = t * 100;
-                    const x = 100 + (1000 * t); // Directamente calculado
+                    const x = 50 + (1100 * t); // Calculado con el nuevo rango
                     const isActive = progress >= checkpointProgress;
                     const checkpointText = checkpointTexts[index];
                     
@@ -230,14 +227,14 @@ const Camion = () => {
                             <rect
                               x={x - 80}
                               y="80"
-                              width="160"
+                              width="180"
                               height="35"
                               rx="6"
                               fill="rgba(255, 255, 255, 0.95)"
                               stroke="#e5e7eb"
                               strokeWidth="1"
                               style={{
-                                filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.15))'
+                                filter: 'drop-shadow(0 2px 6px rgba(32, 32, 32, 0.34))'
                               }}
                             />
                             
@@ -246,11 +243,11 @@ const Camion = () => {
                               x={x}
                               y="102"
                               textAnchor="middle"
-                              fontSize="18"
+                              fontSize="14"
                               fontWeight="600"
-                              fill="#374151"
+                              fill="#424242ff"
                               style={{
-                                fontFamily: 'system-ui, -apple-system, sans-serif'
+                                fontFamily: 'system-ui, Avenir, Helvetica, Arial, sans-serif;'
                               }}
                             >
                               {checkpointText.title}
@@ -267,7 +264,7 @@ const Camion = () => {
               <motion.div
                 style={{
                   position: 'absolute',
-                  left: useTransform(truckX, (x) => `calc(${x} - 2.5%)`),
+                  left: useTransform(truckX, (x) => `calc(${x})`),
                   top: useTransform(truckY, (y) => `calc(${y} - 15%)`),
                   transform: 'translate(-50%, -50%)',
                   zIndex: 20,
@@ -295,7 +292,7 @@ const Camion = () => {
                       width: '55px', 
                       height: '55px',
                       filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.4))',
-                      backgroundColor: 'rgba(40, 113, 182, 1)',
+                      backgroundColor: '#3478b8',
                       borderRadius: '50%'
                     }} 
                   />
@@ -306,7 +303,16 @@ const Camion = () => {
 
           {/* Sección de contenido (derecha) */}
           <div className="truck-content-section">
-            {/* Controles arriba */}
+            {/* Sección de información del checkpoint actual */}
+            <div className="truck-info-section" key={textKey}>
+              <h3 className="truck-info-title">
+                {checkpointTexts[currentCheckpoint]?.title || 'Cargando...'}
+              </h3>
+              <p className="truck-info-description">
+                {checkpointTexts[currentCheckpoint]?.description || 'Preparando información...'}
+              </p>
+            </div>
+
             <div className="truck-controls">
               {/* Botones de navegación entre checkpoints */}
               <div className="truck-buttons">
@@ -326,16 +332,6 @@ const Camion = () => {
                    &gt;
                 </button>
               </div>
-            </div>
-
-            {/* Sección de información del checkpoint actual */}
-            <div className="truck-info-section" key={textKey}>
-              <h3 className="truck-info-title">
-                {checkpointTexts[currentCheckpoint]?.title || 'Cargando...'}
-              </h3>
-              <p className="truck-info-description">
-                {checkpointTexts[currentCheckpoint]?.description || 'Preparando información...'}
-              </p>
             </div>
           </div>
         </div>

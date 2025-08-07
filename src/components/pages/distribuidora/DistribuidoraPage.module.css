@@ -15,6 +15,30 @@
     border-radius: 8px;
 }
 
+.content {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.content h4 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.content h5 {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
 /* Mobile */
 @media (min-width: 481px) {
 
@@ -23,6 +47,18 @@
         height: 60%;
         object-fit: contain;
         border-radius: 8px;
+    }
+
+    .content {
+        width: 85%;
+    }
+
+    .content h4 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .content h5 {
+        font-size: 1rem; /* 16px */
     }
 }
 
@@ -38,6 +74,19 @@
     .portada img {
         width: 45%;
     }
+
+    .content {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .content h4 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .content h5 {
+        font-size: 1rem; /* 16px */
+    }
 }
 
 /* Desktop (min-width: 1025px) */
@@ -52,6 +101,21 @@
     .portada img {
         width: 45%;
         height: auto;
+    }
+
+    .content {
+        width: 80%;
+        padding: 40px;
+    }
+
+    .content h4 {
+        font-size: 1.5rem; /* 24px */
+        margin-bottom: 1.5rem;
+    }
+
+    .content h5 {
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.6;
     }
 }
 
