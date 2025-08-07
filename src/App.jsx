@@ -4,6 +4,7 @@ import { OfertasPage } from './components/pages/ofertas/OfertasPage';
 import { ComoComprarPage } from './components/pages/como-comprar/ComoComprarPage';
 import { EmpresaPage } from './components/pages/empresa/EmpresaPage';
 import { SucursalesPage } from './components/pages/sucursales/SucursalesPage';
+import { DistribuidoraPage } from './components/pages/distribuidora/DistribuidoraPage';
 
 function App () {
     return ( 
@@ -20,6 +21,9 @@ function App () {
                 }></Route>
                 <Route path='/sucursales' element={
                     <SucursalesPage/>
+                }></Route>
+                <Route path='/distribuidora' element={
+                    <DistribuidoraPage/>
                 }></Route>
             </Routes>
         </div>

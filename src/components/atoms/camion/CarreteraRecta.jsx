@@ -75,82 +75,44 @@ const Camion = () => {
     requestAnimationFrame(animate);
   };
 
-  // Función para calcular puntos exactos sobre la curva SVG + línea recta
-  const calculatePointOnCurve = (t) => {
-    // La curva termina en t=0.8, después va recto
-    if (t <= 0.8) {
-      // Ajustar t para que la curva use solo el 80% del progreso
-      const curveT = t / 0.8;
-      
-      if (curveT <= 0.333) {
-        // Primera curva: 60,250 → 140,120 → 280,220
-        const localT = curveT / 0.333;
-        const x = (1 - localT) * (1 - localT) * 60 + 2 * (1 - localT) * localT * 140 + localT * localT * 280;
-        const y = (1 - localT) * (1 - localT) * 250 + 2 * (1 - localT) * localT * 120 + localT * localT * 220;
-        return { x: (x / 1200) * 100, y: (y / 320) * 100 };
-      } else if (curveT <= 0.666) {
-        // Segunda curva: 280,220 → 420,120 → 560,220
-        const localT = (curveT - 0.333) / 0.333;
-        const x = (1 - localT) * (1 - localT) * 280 + 2 * (1 - localT) * localT * 420 + localT * localT * 560;
-        const y = (1 - localT) * (1 - localT) * 220 + 2 * (1 - localT) * localT * 120 + localT * localT * 220;
-        return { x: (x / 1200) * 100, y: (y / 320) * 100 };
-      } else {
-        // Tercera curva: 560,220 → 700,120 → 840,250
-        const localT = (curveT - 0.666) / 0.334;
-        const x = (1 - localT) * (1 - localT) * 560 + 2 * (1 - localT) * localT * 700 + localT * localT * 840;
-        const y = (1 - localT) * (1 - localT) * 220 + 2 * (1 - localT) * localT * 120 + localT * localT * 250;
-        return { x: (x / 1200) * 100, y: (y / 320) * 100 };
-      }
-    } else {
-      // Línea recta después de la curva (t > 0.8)
-      const straightT = (t - 0.8) / 0.2; // Los últimos 20% son línea recta
-      const startX = (840 / 1200) * 100; // Punto donde termina la curva
-      const startY = (250 / 320) * 100;
-      const endX = (1100 / 1200) * 100;  // Punto final (más a la derecha)
-      const endY = startY;               // Misma altura (línea recta horizontal)
-      
-      const x = startX + (endX - startX) * straightT;
-      const y = startY + (endY - startY) * straightT;
-      
-      return { x, y };
-    }
+  // Función para calcular puntos sobre la carretera recta
+  const calculatePointOnRoad = (t) => {
+    // Carretera recta horizontal desde x=100 hasta x=1100 (en coordenadas SVG)
+    // Y centrada en y=240 (75% de 320)
+    const startX = 100;
+    const endX = 1100;
+    const y = 240;
+    
+    const x = startX + (endX - startX) * t;
+    // Convertir a porcentajes para posicionamiento del camión
+    return { x: (x / 1200) * 100, y: (y / 320) * 100 };
   };
 
-  // Calcular rotación del camión basada en la tangente de la curva con suavizado
+  // Calcular rotación del camión (siempre 0 grados para carretera recta)
   const calculateTruckRotation = (t) => {
-    if (t >= 0.8) {
-      // En la línea recta, el camión va horizontal (0 grados)
-      return 0;
-    }
-    
-    const current = calculatePointOnCurve(t);
-    const next = calculatePointOnCurve(Math.min(t + 0.005, 0.8)); // Usar incremento más pequeño para suavizar
-    const angle = Math.atan2(next.y - current.y, next.x - current.x) * (180 / Math.PI);
-    
-    // Suavizar el ángulo limitando cambios bruscos
-    return angle * 0.7; // Reducir la intensidad de la rotación
+    return 0; // Siempre horizontal en carretera recta
   };
 
-  // Posición del camión siguiendo la curva
+  // Posición del camión siguiendo la carretera recta
   const truckX = useTransform(
     normalizedProgress,
-    (t) => `${calculatePointOnCurve(t).x}%`
+    (t) => `${calculatePointOnRoad(t).x}%`
   );
   
   const truckY = useTransform(
     normalizedProgress,
-    (t) => `${calculatePointOnCurve(t).y}%`
+    (t) => `${calculatePointOnRoad(t).y}%`
   );
 
-  // Rotación del camión según la curva con transición suave
+  // Rotación del camión (siempre 0 para carretera recta)
   const truckRotation = useTransform(
     normalizedProgress,
     (t) => calculateTruckRotation(t)
   );
 
-  // Generar path de la carretera usando coordenadas absolutas originales
+  // Generar path de la carretera recta con coordenadas absolutas
   const generateRoadPath = () => {
-    return `M 60 250 Q 140 120, 280 220 Q 420 120, 560 220 Q 700 120, 840 250 L 1100 250`;
+    return `M 100 240 L 1100 240`;
   };
 
   // Función para animar automáticamente
@@ -195,18 +157,22 @@ const Camion = () => {
                   zIndex: 1
                 }}
               >
-                {/* SVG de la carretera fijo con viewBox original pero responsive */}
+                {/* SVG de la carretera recta con fondo de prueba */}
                 <svg 
                   style={{ 
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
                     left: '0',
-                    top: '0'
+                    top: '0',
+                    border: '2px solid red' // Para debuggear
                   }}
                   viewBox="0 0 1200 320"
                   preserveAspectRatio="xMidYMid meet"
                 >
+                  {/* Fondo de prueba */}
+                  <rect x="0" y="0" width="1200" height="320" fill="#f0f9ff" opacity="0.5" />
+                  
                   <defs>
                     <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" stopColor="#e5e7eb" />
@@ -214,66 +180,102 @@ const Camion = () => {
                     </linearGradient>
                   </defs>
                   
-                  {/* Carretera base con extensión recta usando coordenadas absolutas */}
-                  <path
-                    d={generateRoadPath()}
-                    stroke="url(#pathGradient)"
+                  {/* Carretera base recta - SIMPLIFICADA */}
+                  <line
+                    x1="100" y1="240" 
+                    x2="1100" y2="240"
+                    stroke="#6b7280"
                     strokeWidth="50"
-                    fill="none"
                     strokeLinecap="round"
                     opacity="0.8"
                   />
 
-                  {/* Línea blanca que se va dibujando */}
-                  <motion.path
-                    d={generateRoadPath()}
+                  {/* Línea blanca central */}
+                  <line
+                    x1="100" y1="240" 
+                    x2="1100" y2="240"
                     stroke="white"
                     strokeWidth="6"
-                    fill="none"
                     strokeLinecap="round"
-                    strokeDasharray="22"
+                    strokeDasharray="20 10"
                     style={{ 
                       filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
                     }}
                   />
 
-                  {/* Checkpoints en la carretera usando coordenadas absolutas */}
+                  {/* Checkpoints en la carretera recta */}
                   {[0, 0.265, 0.534, 0.8, 1].map((t, index) => {
-                    const point = calculatePointOnCurve(t);
+                    const point = calculatePointOnRoad(t);
                     const checkpointProgress = t * 100;
+                    const x = 100 + (1000 * t); // Directamente calculado
+                    const isActive = progress >= checkpointProgress;
+                    const checkpointText = checkpointTexts[index];
+                    
                     return (
                       <g key={`road-checkpoint-${index}`}>
+                        {/* Checkpoint círculo */}
                         <circle
-                          cx={(point.x / 100) * 1200}
-                          cy={(point.y / 100) * 320}
+                          cx={x}
+                          cy="240"
                           r="12"
-                          fill={progress >= checkpointProgress ? "#10b981" : "#6b7280"}
+                          fill={isActive ? "#10b981" : "#6b7280"}
                           stroke="white"
                           strokeWidth="3"
                         />
+                        
+                        {/* Cuadro de texto que aparece cuando se activa el checkpoint */}
+                        {isActive && checkpointText && (
+                          <g>
+                            {/* Fondo del cuadro de texto */}
+                            <rect
+                              x={x - 80}
+                              y="80"
+                              width="160"
+                              height="35"
+                              rx="6"
+                              fill="rgba(255, 255, 255, 0.95)"
+                              stroke="#e5e7eb"
+                              strokeWidth="1"
+                              style={{
+                                filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.15))'
+                              }}
+                            />
+                            
+                            {/* Texto del cuadro */}
+                            <text
+                              x={x}
+                              y="102"
+                              textAnchor="middle"
+                              fontSize="18"
+                              fontWeight="600"
+                              fill="#374151"
+                              style={{
+                                fontFamily: 'system-ui, -apple-system, sans-serif'
+                              }}
+                            >
+                              {checkpointText.title}
+                            </text>
+                          </g>
+                        )}
                       </g>
                     );
                   })}
                 </svg>
               </div>
 
-              {/* Camión que se mueve por la curva */}
+              {/* Camión que se mueve por la carretera recta */}
               <motion.div
                 style={{
                   position: 'absolute',
                   left: useTransform(truckX, (x) => `calc(${x} - 2.5%)`),
                   top: useTransform(truckY, (y) => `calc(${y} - 15%)`),
                   transform: 'translate(-50%, -50%)',
-                  rotate: truckRotation,
                   zIndex: 20,
                   width: '60px',
                   height: '60px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
-                }}
-                transition={{
-                  rotate: { type: "spring", stiffness: 100, damping: 20 } // Transición suave para rotación
                 }}
               >
                 <motion.div
@@ -293,7 +295,7 @@ const Camion = () => {
                       width: '55px', 
                       height: '55px',
                       filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.4))',
-                      backgroundColor: 'rgba(45, 71, 216, 1)',
+                      backgroundColor: 'rgba(40, 113, 182, 1)',
                       borderRadius: '50%'
                     }} 
                   />

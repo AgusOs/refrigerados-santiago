@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './DistribuidoraPage.module.css';
 import { motion } from 'motion/react';
 import Camion from '../../atoms/camion/Camion.jsx';
+import CamionRecto from '../../atoms/camion/CarreteraRecta.jsx';
 
 export const DistribuidoraPage = () => {
   return (
@@ -21,6 +22,7 @@ export const DistribuidoraPage = () => {
         <img src="/assets/distribuidora/compromiso.png" alt="sign"/>
       </motion.div>
       <Camion/>
+      <CamionRecto/>
     </div>
   );
 }
