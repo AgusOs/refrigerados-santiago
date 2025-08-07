@@ -196,7 +196,7 @@ const Camion = () => {
                                    wordWrap: 'break-word',
                                    zIndex: 10
                                  }}>
-                              {checkpointText.title.slice(":")}
+                              {checkpointText.title.replace(":", "")}
                             </div>
                           </foreignObject>
                         )}

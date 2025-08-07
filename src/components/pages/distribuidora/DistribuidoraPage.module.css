@@ -93,7 +93,7 @@
 @media (min-width: 1025px) {
 
     .portada {
-        height: 90vh;
+        height: 80vh;
         flex-direction: row;
         justify-content: space-evenly;
     }

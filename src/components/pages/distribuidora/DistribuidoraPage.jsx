@@ -25,7 +25,7 @@ export const DistribuidoraPage = () => {
       className={styles.content}
       initial={{ x: 100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
-      viewport={{ once: true, amount: 0.3 }} 
+      viewport={{ once: true, amount: 0.5 }} 
       transition={{
         type: "spring",
         stiffness: 65,
@@ -35,7 +35,18 @@ export const DistribuidoraPage = () => {
         <h4>En Santiago Distribuidora trabajamos con un sistema de entrega ágil, versátil y confiable.</h4>
         <h5>Nos especializamos en abastecer a comercios, autoservicios, supermercados y emprendimientos gastronómicos, acercando una amplia variedad de productos: refrigerados, congelados, secos, bebidas, limpieza y más.</h5>
       </motion.div>
-      <CamionRecto/>
+      <motion.div
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.5 }} 
+      transition={{
+        type: "spring",
+        stiffness: 65,
+        damping: 10
+      }}
+      >
+        <CamionRecto/>
+      </motion.div>
     </div>
   );
 }
