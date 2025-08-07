@@ -5,7 +5,7 @@
 }
 
 .truck-wrapper {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@
 
 .truck-canvas {
   width: 100%;
-  height: 120px; /* Reducido de 200px */
+  height: 200px; /* Reducido de 200px */
   background: white;
   border-radius: 0.75rem;
   position: relative;
@@ -165,8 +165,8 @@
   }
 
   .truck-animation-section {
-      width: 75%;
-      height: 140px; /* Reducido de 200px */
+      width: 100%;
+      height: 200px; /* Reducido de 200px */
   }
 
   .truck-content-section {
@@ -282,6 +282,7 @@
 
   .truck-canvas {
     height: 220px; /* Reducido de 400px */
+    width: 100%;
     border-radius: 2rem;
   }
 

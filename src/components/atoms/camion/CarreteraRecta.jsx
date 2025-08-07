@@ -80,12 +80,12 @@ const Camion = () => {
   const calculatePointOnRoad = (t) => {
     // Carretera centrada en el viewBox
     const startX = 100;   // Margen del 8.3% a la izquierda
-    const endX = 1200;    // Margen del 8.3% a la derecha
+    const endX = 1800;    // Margen del 8.3% a la derecha
     const y = 240;
     
     const x = startX + (endX - startX) * t;
     // Convertir a porcentajes para posicionamiento del camión
-    return { x: (x / 1200) * 100, y: (y / 320) * 100 };
+    return { x: (x / 1900) * 100, y: (y / 320) * 100 };
   };
 
   // Posición del camión siguiendo la carretera recta
@@ -105,7 +105,7 @@ const Camion = () => {
         <div className="truck-main-layout">
           {/* Sección de animación (izquierda) */}
           <div className="truck-animation-section">
-            <div className="truck-canvas" style={{ position: 'relative', overflow: 'hidden' }}>
+            <div className="truck-canvas" style={{ position: 'relative', overflow: 'visible' }}>
               
               {/* Fondo fijo (carretera y paisaje) */}
               <div
@@ -120,13 +120,12 @@ const Camion = () => {
                 <svg 
                   style={{ 
                     position: 'absolute',
-                    width: '100%',
-                    height: '100%',
+                    inset: '0',
                     left: '0',
                     top: '0',
                     transform: 'translateX(0%)'
                   }}
-                  viewBox="0 0 1200 320"
+                  viewBox="0 0 1900 320"
                   preserveAspectRatio="xMidYMid meet"
                 >
                   <defs>
@@ -138,8 +137,8 @@ const Camion = () => {
                   
                   {/* Carretera base recta - centrada */}
                   <line
-                    x1="0" y1="240" 
-                    x2="1700" y2="240"
+                    x1="100" y1="240" 
+                    x2="1800" y2="240"
                     stroke="#6b7280"
                     strokeWidth="50"
                     strokeLinecap="round"
@@ -148,8 +147,8 @@ const Camion = () => {
 
                   {/* Línea blanca central - centrada */}
                   <line
-                    x1="0" y1="240" 
-                    x2="1700" y2="240"
+                    x1="100" y1="240" 
+                    x2="1800" y2="240"
                     stroke="white"
                     strokeWidth="6"
                     strokeLinecap="round"
@@ -160,10 +159,10 @@ const Camion = () => {
                   />
 
                   {/* Checkpoints en la carretera recta */}
-                  {[0, 0.265, 0.534, 0.8, 1].map((t, index) => {
+                  {[0, 0.265, 0.533, 0.8, 1].map((t, index) => {
                     const point = calculatePointOnRoad(t);
                     const checkpointProgress = t * 100;
-                    const x = 120 + (960 * t); // 80% del ancho: startX=120, rango=960
+                    const x = 100 + (1700 * t); // 80% del ancho: startX=120, rango=960
                     const isActive = progress >= checkpointProgress;
                     const checkpointText = checkpointTexts[index];
                     
@@ -181,37 +180,25 @@ const Camion = () => {
                         
                         {/* Cuadro de texto que aparece cuando se activa el checkpoint */}
                         {isActive && checkpointText && (
-                          <g>
-                            {/* Fondo del cuadro de texto */}
-                            <rect
-                              x={x - 80}
-                              y="80"
-                              width="180"
-                              height="35"
-                              rx="6"
-                              fill="rgba(255, 255, 255, 0.95)"
-                              stroke="#e5e7eb"
-                              strokeWidth="1"
-                              style={{
-                                filter: 'drop-shadow(0 2px 6px rgba(32, 32, 32, 0.34))'
-                              }}
-                            />
-                            
-                            {/* Texto del cuadro */}
-                            <text
-                              x={x}
-                              y="102"
-                              textAnchor="middle"
-                              fontSize="14"
-                              fontWeight="600"
-                              fill="#424242ff"
-                              style={{
-                                fontFamily: 'system-ui, Avenir, Helvetica, Arial, sans-serif;'
-                              }}
-                            >
-                              {checkpointText.title}
-                            </text>
-                          </g>
+                          <foreignObject x={x - 90} y="70" width="180" height="50">
+                            <div xmlns="http://www.w3.org/1999/xhtml"
+                                 style={{
+                                   fontSize: '16px',
+                                   fontWeight: '600',
+                                   color: '#424242',
+                                   textAlign: 'center',
+                                   background: 'rgba(255, 255, 255, 0.95)',
+                                   border: '1px solid #e5e7eb',
+                                   borderRadius: '8px',
+                                   padding: '5px',
+                                   boxShadow: '0 2px 6px rgba(32, 32, 32, 0.3)',
+                                   overflowWrap: 'break-word',
+                                   wordWrap: 'break-word',
+                                   zIndex: 10
+                                 }}>
+                              {checkpointText.title.slice(":")}
+                            </div>
+                          </foreignObject>
                         )}
                       </g>
                     );
@@ -224,7 +211,7 @@ const Camion = () => {
                 style={{
                   position: 'absolute',
                   left: useTransform(truckX, (x) => `calc(${x})`),
-                  top: useTransform(truckY, (y) => `calc(${y} - 15%)`),
+                  top: useTransform(truckY, (y) => `calc(${y})`),
                   transform: 'translate(-50%, -50%)',
                   zIndex: 20,
                   width: '60px',
