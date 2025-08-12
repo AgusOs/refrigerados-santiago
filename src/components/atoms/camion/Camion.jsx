@@ -215,8 +215,8 @@ const Camion = () => {
               <motion.div
                 style={{
                   position: 'absolute',
-                  left: useTransform(truckX, (x) => `calc(${x})`),
-                  top: useTransform(truckY, (y) => `calc(${y})`),
+                  left: truckX,
+                  top: truckY,
                   transform: 'translate(-50%, -50%)',
                   zIndex: 20,
                   width: '60px',
