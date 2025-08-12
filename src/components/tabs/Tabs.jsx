@@ -41,6 +41,7 @@ export const Tabs = () => {
         <button onClick={handleNavigate('/clientes')}>Nuestros clientes</button>
         <button onClick={handleNavigate('/empresa')}>La empresa</button>
         <button onClick={handleNavigate('/sucursales')}>Sucursales</button>
+        <button onClick={handleNavigate('/distribuidora')}>Distribuidora</button>
       </div>
       <div className={styles.socialscontainer}>
         <a href="https://www.facebook.com/refrigeradosantiago" target="_blank" rel="noopener noreferrer">

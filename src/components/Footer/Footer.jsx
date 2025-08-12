@@ -25,6 +25,9 @@ export const Footer = () => {
               <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="/sucursales" rel="noopener noreferrer">
                 Sucursales
               </a>
+              <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="/distribuidora" rel="noopener noreferrer">
+                Distribuidora
+              </a>
               <a style={{color: '#ffffff', textDecoration: 'none', fontWeight: '600', textAlign: 'center', padding: '10px', marginRight: '20px'}} href="https://mail.google.com/mail/?view=cm&fs=1&to=cv@refrigeradosantiago.com.ar" target="_blank" rel="noopener noreferrer">
                 Tabaja con nosotros
               </a>

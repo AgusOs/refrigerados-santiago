@@ -180,7 +180,12 @@ const Camion = () => {
                         
                         {/* Cuadro de texto que aparece cuando se activa el checkpoint */}
                         {isActive && checkpointText && (
-                          <foreignObject x={x - 90} y="70" width="180" height="50">
+                          <foreignObject 
+                            x={Math.max(0, Math.min(x - 90, 1900 - 180))} 
+                            y={Math.max(0, Math.min(70, 320 - 50))} 
+                            width="180" 
+                            height="70"
+                          >
                             <div xmlns="http://www.w3.org/1999/xhtml"
                                  style={{
                                    fontSize: '16px',
@@ -238,7 +243,7 @@ const Camion = () => {
                       width: '55px', 
                       height: '55px',
                       filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.4))',
-                      backgroundColor: '#3478b8',
+                      backgroundColor: '#ffffffff',
                       borderRadius: '50%'
                     }} 
                   />

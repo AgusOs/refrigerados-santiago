@@ -2,7 +2,8 @@ import React from 'react'
 import styles from './DistribuidoraPage.module.css';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
-import CamionRecto from '../../atoms/camion/CarreteraRecta.jsx';
+import Camion from '../../atoms/camion/Camion.jsx';
+
 
 export const DistribuidoraPage = () => {
   return (
@@ -45,7 +46,7 @@ export const DistribuidoraPage = () => {
         damping: 10
       }}
       >
-        <CamionRecto/>
+        <Camion/>
       </motion.div>
     </div>
   );

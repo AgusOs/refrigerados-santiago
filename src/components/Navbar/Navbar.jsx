@@ -39,6 +39,10 @@ const navItems = [
   {
     name: 'Sucursales',
     path: '/sucursales'
+  },
+  {
+    name: 'Distribuidora',
+    path: '/distribuidora'
   }
 ];
 

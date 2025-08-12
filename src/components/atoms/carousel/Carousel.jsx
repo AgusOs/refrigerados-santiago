@@ -20,14 +20,14 @@ export const Carousel = () => {
   };
 
   const ofertas = [
-    { path: '/assets/ofertas/1.png', title: 'TAPAS DE EMPANADAS TAPA MANIA'},
-    { path: '/assets/ofertas/2.png', title: 'LAVANDINA HEROE x1 Lt'},
-    { path: '/assets/ofertas/3.png', title: 'PURE DE TOMATES DOÑA PEPA'},
-    { path: '/assets/ofertas/4.png', title: 'FIDEOS CELENTANO MAROLIO'},
-    { path: '/assets/ofertas/5.png', title: 'TALLARINES MAROLIO'},
-    { path: '/assets/ofertas/6.png', title: 'BONDIOLA DON ALEJANDRO x Kg'},
-    { path: '/assets/ofertas/8.png', title: 'MORTADELA PALADINI x Kg'},
-    { path: '/assets/ofertas/9.png', title: 'SALCHICHAS FELA x 6u'},
+    { path: '/assets/ofertas/1.png', title: 'MORTADELA PALADINI x Kg'},
+    { path: '/assets/ofertas/2.png', title: 'QUESO CREMOSO DON FELIX x Kg'},
+    { path: '/assets/ofertas/3.png', title: 'TAPAS DE EMPANADAS TAPA MANIA'},
+    { path: '/assets/ofertas/4.png', title: 'SALCHICHAS FELA x 6u'},
+    { path: '/assets/ofertas/5.png', title: 'SALCHICHAS PALADINI x 6u'},
+    { path: '/assets/ofertas/6.png', title: 'NESQUIK x 360grs'},
+    { path: '/assets/ofertas/8.png', title: 'LECHE LARGA VIDA FRANSAFE'},
+    { path: '/assets/ofertas/9.png', title: 'LECHE CHOCOLATADA MILKAUT'},
     { path: '/assets/ofertas/7.webp', title: 'AZÚCAR LEDESMA 1Kg'},
   ];
   
