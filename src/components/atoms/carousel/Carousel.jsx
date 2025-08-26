@@ -20,15 +20,14 @@ export const Carousel = () => {
   };
 
   const ofertas = [
-    { path: '/assets/ofertas/1.png', title: 'MORTADELA PALADINI x Kg'},
-    { path: '/assets/ofertas/2.png', title: 'QUESO CREMOSO DON FELIX x Kg'},
-    { path: '/assets/ofertas/3.png', title: 'TAPAS DE EMPANADAS TAPA MANIA'},
-    { path: '/assets/ofertas/4.png', title: 'SALCHICHAS FELA x 6u'},
-    { path: '/assets/ofertas/5.png', title: 'SALCHICHAS PALADINI x 6u'},
-    { path: '/assets/ofertas/6.png', title: 'NESQUIK x 360grs'},
-    { path: '/assets/ofertas/8.png', title: 'LECHE LARGA VIDA FRANSAFE'},
-    { path: '/assets/ofertas/9.png', title: 'LECHE CHOCOLATADA MILKAUT'},
-    { path: '/assets/ofertas/7.webp', title: 'AZÚCAR LEDESMA 1Kg'},
+    { path: '/assets/ofertas/1.png', title: 'QUESO CREMOSO DON FELIX x Kg'},
+    { path: '/assets/ofertas/2.png', title: 'MEDALLONES DE POLLO TRES ARROYOS'},
+    { path: '/assets/ofertas/3.png', title: 'YOGURT CON CEREALES MILKAUT'},
+    { path: '/assets/ofertas/4.png', title: 'YOGURT BEBIBLE MILKAUT'},
+    { path: '/assets/ofertas/5.png', title: 'YERBA AMANDA x 1Kg'},
+    { path: '/assets/ofertas/6.png', title: 'BROWNIE CON CHIPS DE CHOCOLATE'},
+    { path: '/assets/ofertas/8.png', title: 'LAVANDINA EN GEL HÉROE'},
+    { path: '/assets/ofertas/7.webp', title: 'AZÚCAR LEDESMA x 1Kg'},
   ];
   
   return (
