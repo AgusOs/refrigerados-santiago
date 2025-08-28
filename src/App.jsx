@@ -5,6 +5,7 @@ import { ComoComprarPage } from './components/pages/como-comprar/ComoComprarPage
 import { EmpresaPage } from './components/pages/empresa/EmpresaPage';
 import { SucursalesPage } from './components/pages/sucursales/SucursalesPage';
 import { DistribuidoraPage } from './components/pages/distribuidora/DistribuidoraPage';
+import { PoliticasPage } from './components/pages/PoliticasPage';
 
 function App () {
     return ( 
@@ -24,6 +25,9 @@ function App () {
                 }></Route>
                 <Route path='/distribuidora' element={
                     <DistribuidoraPage/>
+                }></Route>
+                <Route path='/politicasdeprivacidad' element={
+                    <PoliticasPage/>
                 }></Route>
             </Routes>
         </div>
