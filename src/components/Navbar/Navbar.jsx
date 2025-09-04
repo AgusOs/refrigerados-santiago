@@ -29,6 +29,10 @@ const navItems = [
     path: '/'
   },
   {
+    name: 'Distribuidora',
+    path: '/distribuidora'
+  },
+  {
     name: 'Nuestros clientes',
     path: '/clientes'
   },
@@ -39,10 +43,6 @@ const navItems = [
   {
     name: 'Sucursales',
     path: '/sucursales'
-  },
-  {
-    name: 'Distribuidora',
-    path: '/distribuidora'
   }
 ];
 

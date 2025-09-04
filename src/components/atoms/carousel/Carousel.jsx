@@ -21,13 +21,10 @@ export const Carousel = () => {
 
   const ofertas = [
     { path: '/assets/ofertas/1.png', title: 'QUESO CREMOSO DON FELIX x Kg'},
-    { path: '/assets/ofertas/2.png', title: 'MEDALLONES DE POLLO TRES ARROYOS'},
-    { path: '/assets/ofertas/3.png', title: 'YOGURT CON CEREALES MILKAUT'},
-    { path: '/assets/ofertas/4.png', title: 'YOGURT BEBIBLE MILKAUT'},
-    { path: '/assets/ofertas/5.png', title: 'YERBA AMANDA x 1Kg'},
-    { path: '/assets/ofertas/6.png', title: 'BROWNIE CON CHIPS DE CHOCOLATE'},
-    { path: '/assets/ofertas/8.png', title: 'LAVANDINA EN GEL HÉROE'},
-    { path: '/assets/ofertas/7.webp', title: 'AZÚCAR LEDESMA x 1Kg'},
+    { path: '/assets/ofertas/2.png', title: 'CERVEZA ORTUZAR PACK x6'},
+    { path: '/assets/ofertas/4.png', title: 'SALCHICHAS FELA x6u'},
+    { path: '/assets/ofertas/5.png', title: 'AGUA VILLAMANAOS 6Lts'},
+    { path: '/assets/ofertas/6.png', title: 'AZUCAR CHANGUITO x1Kg'},
   ];
   
   return (
