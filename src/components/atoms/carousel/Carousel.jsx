@@ -20,7 +20,7 @@ export const Carousel = () => {
   };
 
   const ofertas = [
-    { path: '/assets/ofertas/1.png', title: 'QUESO CREMOSO DON FELIX 12345 x Kg'},
+    { path: '/assets/ofertas/1.png', title: 'QUESO CREMOSO DON FELIX x Kg'},
     { path: '/assets/ofertas/2.png', title: 'PAN DULCE CON FRUTAS VALENTE'},
     { path: '/assets/ofertas/3.png', title: 'AZUCAR CHANGUITO x1Kg'},
     { path: '/assets/ofertas/4.png', title: 'LECHE LARGA VIDA FRANSAFE'},
